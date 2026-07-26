@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Terms and Conditions -Clear Guidelines for Service</title>
+  <meta name="description"
+    content="Explore our comprehensive terms and conditions page to understand the guidelines and policies that govern the usage of our services.">
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+  <link rel="canonical" href="index.html" />
+
+  <meta content="terms and conditions, guidelines, policies, service usage, user rights, privacy, disclaimers, transparency" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.webp" rel="icon">
+  <link href="../assets/img/apple-touch-icon.webp" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="../assets/css/googleFonts.css" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="overlay" id="enquiryPopup">
+    <div class="popup-content">
+        <button class="close-button" id="closeButton" >&times;</button>
+        <h2>Quick Enquiry</h2>
+        <p>Got a question? Contact us Quickly and easily using the following form and we will get back to you ASAP!</p>
+         <form action="#local-form-handler" method="post" id="contactForm" class="contact-form">
+            <label for="phone">Phone Number:</label>
+            <input type="text" name="phone" id="phone-number" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email-id" required>
+            <label for="message">Message:</label>
+            <textarea id="message-text1" name="message" required></textarea>
+            <button class="blue" type="submit">Submit</button>
+        </form>
+        <div id="successPopup" style="display: none;">
+              <p>Message sent successfully!</p>
+          </div>
+          <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var form = event.target;
+            var formData = new FormData(form);
+
+            var xhr = new XMLHttpRequest();
+            console.info("Local clone form submission intercepted.");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        document.getElementById("successPopup").style.display = "block";
+                        form.reset(); // Clear the form after successful submission
+                        setTimeout(function() {
+                            document.getElementById("successPopup").style.display = "none";
+                        }, 3000); // Hide the success message after 3 seconds (3000 milliseconds)
+                    } else {
+                        alert("Failed to send the message. Please try again later.");
+                    }
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="../index.html" class="logo d-flex align-items-center">
+        <img src="/assets/img/logo-gch-mark.svg" alt="Global Contact Hub">
+        <span>Global Contact Hub</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="../index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="../About-Us/index.html">About Us</a></li>
+          <li class="dropdown"><a class="active" ><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="../Automotive-Industry-List/index.html"><span>Automotive Industry List</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../Automobile-Industry-Email-List/index.html">Automobile Industry Email List</a></li>
+                  <li><a href="../Automotive-Email-List/index.html">Automotive Email List</a></li>
+                  <li><a href="../Auto-Dealers-Email-List/index.html">Auto Dealers Email List</a></li>
+                  <li><a href="../New-Car-Dealer-Email-List/index.html">New Car Dealers Email List</a></li>
+                  <li><a href="../Used-Car-Dealers-Email-List/index.html">Used Car Dealers Email List</a></li>
+                  <li><a href="../automotive-more-industries/index.html">&amp; Many more</a></li>
+                </ul>
+              </li>
+              <li><a class="nav-link scrollto" href="../Aviation-Industry/index.html">Aviation Industry</a></li>
+              <li class="dropdown"><a href="../Chemical-Industry/index.html"><span>Chemical Industry</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../Chemicals-Email-List/index.html">Chemicals Email List</a></li>
+                  <li><a href="../Equipments-Manufactures-Email-List/index.html">Equipments Manufactures Email List</a></li>
+                  <li><a href="../Laboratories-Email-List/index.html">Laboratories Email List</a></li>
+                  <li><a href="../Pharmaceuticals-Email-List/index.html">Pharmaceuticals Email List</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="../Education-Sector/index.html"><span>Education Sector</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../Charter-Schools-Email-List/index.html">Charter Schools Email List</a></li>
+                  <li><a href="../Colleges-and-Universities-Email-List/index.html">Colleges and Universities Email List</a></li>
+                  <li><a href="../K-12-Schools-Email-List/index.html">K-12 Schools Email List</a></li>
+                  <li><a href="../Principals-Email-List/index.html">Principals Email List</a></li>
+                  <li><a href="../Schools-Districts-Email-List/index.html">Schools Districts Email List</a></li>
+                  <li><a href="../Schools-Email-List/index.html">Schools Email List</a></li>
+                  <li><a href="../Teachers-Email-List/index.html">Teachers Email List</a></li>
+		    <li><a href="../education-sector-more-industries-list/index.html">&amp; Many more</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="../Finance-Industry/index.html"><span>Finance Industry</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../Banking-Email-List/index.html">Banking Email List</a></li>
+                  <li><a href="../Credit-Unions-Email-List/index.html">Credit Unions Email List</a></li>
+                  <li><a href="../Finance-Industry-Email-List/index.html">Finance Industry Email List</a></li>
+                  <li><a href="../Insurance-Agents-List/index.html">Insurance Agents List</a></li>
+                  <li><a href="../Mortgage-Loan-Brokers-Email-List/index.html">Mortgage Loan Brokers Email List</a></li>
+                  <li><a href="../finance-more-industries/index.html">&amp; Many more</a></li>
+                  <!-- <li><a href="../real-estate-agents-email-list/index.html">Real Estate Agents Email List</a></li> -->
+                </ul>
+              </li>
+              <li class="dropdown"><a href="../Healthcare-Industry/index.html"><span>Healthcare Industry</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../Clinics-Email-List/index.html">Clinics Email List</a></li>
+                  <li><a href="../Dentists-Email-List/index.html">Dentists Email List</a></li>
+                  <li><a href="../Hospitals-Email-List/index.html">Hospitals Email List</a></li>
+                  <li><a href="../Medical-Equipment-Dealers-List/index.html">Medical Equipment Dealers List</a></li>
+                  <li><a href="../Nurses-Email-List/index.html">Nurses Email List</a></li>
+                  <li><a href="../Pharmaceutical-Email-List/index.html">Pharmaceutical Email List</a></li>
+                  <li><a href="../Physicians-and-Surgeons-Email-List/index.html">Physicians and Surgeons Email List</a></li>
+                  <li><a href="../healthcare-more-industries/index.html">&amp; Many more</a></li>
+
+                </ul>
+              </li>
+              <li><a href="../IT-Emailing-List/index.html">IT Emailing List</a></li>
+              <li><a href="../Oil-and-Gas-Industry-List/index.html">Oil and Gas Industry List</a></li>
+              <li><a href="../Real-Estate-Mailing-List/index.html">Real Estate Mailing List</a></li>
+              <li><a href="../property-management-email-list/index.html">Property Management Email List</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../Contact-us/index.html">Contact Us</a></li>
+          <li><a class="nav-link scrollto" href="../blog/index.html">Blog</a></li>
+          <li><a class="nav-link scrollto" href="../Pay-Now/index.html">Pay Now</a></li>
+          <li><a class="nav-link scrollto" href="../browse-data-cards/index.html">Browse Data Cards</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Breadcrumbs ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
+
+      <ol>
+        <li><a href="../index.html"> Home </a></li>
+        <li><a href="index.html"> Terms & Conditions</a></li>
+      </ol>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center"
+    style="background-image: url('../assets/img/bg-abstract.webp'); height: min-content;">
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-12 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Terms & Conditions</h1>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <section id="values" class="values">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-12 text-justify" data-aos="fade-up" data-aos-delay="200">
+            <div class="box">
+              <p>Before using this website or reading this agreement ("Agreement"), please read it carefully. ("Site"). You, as a user, are granted access to and use of this site by Global Contact Hub and its providers subject to your compliance with all applicable laws and the terms, conditions, and notices stated herein. Your use of this website indicates that you accept all of its terms, conditions, and notices.
+                Global Contact Hub and their representatives disclaim all liability for any effects resulting directly or indirectly from any actions or inactions you take in reliance on the information, products, or other content on this site. The accuracy, completeness, and timeliness of the information cannot be guaranteed, and Global Contact Hub and their providers will not be held liable for any loss or harm resulting from it.</p>
+            </div>
+            <br>
+            <div class="box">
+              <p> <span style="color: #012970;font-weight: bold;">Web Content ownership</span> - <a href="../index.html">Global Contact Hub</a> or other owners are the only proprietors of the Website and all of its contents, including but not limited to any source code, text, and graphics ("Web Content"). All trademarks, logos, and service marks used on the Web are the property of Global Contact Hub or other parties and are protected by both registered and unregistered trademark laws. Except as stated in these Terms of utilize, you may not utilise any Web Content without Global Contact Hub' prior written consent.</p>
+              <p><span style="color: #012970;font-weight: bold;">Indemnification</span> - By violating this Agreement, you undertake to indemnify, defend, and keep harmless Global Contact Hub, its affiliates, and suppliers from any responsibility, loss, claim, and expenditure (including reasonable legal expenses).</p>
+              <p><span style="color: #012970;font-weight: bold;">No Illegal or Prohibited Use </span> - You represent and warrant to Global Contact Hub that you will not use this Site for any illegal or prohibited purpose as set out in these terms, conditions, and notices. This representation and warranty shall survive the termination of your use of this Site.</p>
+              <p><span style="color: #012970;font-weight: bold;">Uses of our website that are prohibited</span> - For personal and non-commercial use, you are allowed to view, download, and print the materials on this website. Downloading Web content for non-commercial, private use is permitted, but you must leave the copyright notices in tact. Without the prior written consent of Global Contact Hub, you are not permitted to edit, duplicate, distribute, transmit, display, perform, reproduce, publish, license, create derivative works from, frame in another Web page, or use on any other web site any information received from this Site.</p>
+              <p><span style="color: #012970;font-weight: bold;">Disclaimer and Warranties </span>- By using our website, you do so at your own risk. All Web Content is offered to you "as is" without any explicit or implied warranties of any kind, including, but not limited to, implied warranties of merchantability, fitness for a specific purpose, or non-infringement. It is subject to change at any time without prior notice. Without limiting the aforementioned, <a href="../index.html">Global Contact Hub</a> makes no warranties or representations about the accuracy, completeness, or timeliness of the web content or regarding the fact that your use of any web material won't violate the rights of any third parties.This website's content, including the data, software, goods, and services it offers, might include inaccuracies or typographical mistakes. The data presented here is updated on occasion.</p>
+              <p><span style="color: #012970;font-weight: bold;">Links to websites maintained by other parties </span>- This Site may contain links to websites run by people or organisations other than Global Contact Hub. These links are just available for your reference. Such websites are not within the authority of Global Contact Hub, and their contents are not our responsibility. You access and use such sites, including the information, material, goods, and services therein, at your own risk. Global Contact Hub' inclusion of hyperlinks to such web sites does not indicate any endorsement of the content on such web sites or any affiliation with their operators.</p>
+              <p><span style="color: #012970;font-weight: bold;">Controlling Law & Jurisdiction </span>- Without respect to its rules on choice of law, the laws of the State of Florida, USA, shall govern these Terms of Use and your use of our Website. Any and all disputes arising out of, connected with, or pertaining to these Terms of Use shall be exclusively subject to the general jurisdiction of the courts sitting in Lee County, Florida, USA.</p>
+            </div>
+
+
+            <br>
+            <div class="box">
+              <p><span style="text-decoration: underline;font-weight: bold;"> 1. It is the buyer's obligation to fully grasp the policies of the ESP they have selected (such as Constant Contact, MailChimp, or an internal platform), including any limitations on acceptable bounce rates, misuse rates, and the usage of lists they have paid for. Abuse reports, account bans, and other outcomes from utilising the email list are not Global Contact Hub' responsibility.</span> Purchased lists could be prohibited by some email service providers. ESP recommendations are available upon request. The validity of the emails given will not be affected by any additional internal or outside cleaning, suppressions, or deletions of emails from the list provided. Some third parties or deployment platforms do their own cleaning, which might result in emails being removed from the list or stop the list from being used.</p>
+              <p><span style="text-decoration: underline;font-weight: bold;">2. Data is offered for sale "as is," with no warranties or assurances.</span> In order to receive payment when a greater bounce rate is detected, the client must communicate to the WHOLE database. Global Contact Hub has the right to ask for information on the email list's use, the items delivered, the bounce list, or any other relevant facts. Additional records will be provided by Global Contact Hub if the bounce rate is higher. (pending bounce list review).</p>
+              <p>3. Once the order documents are received back and the money has been completed, the normal processing period for list purchases is 36–72 hours. Global Contact Hub will notify the client if processing takes longer than expected. Quantities of data purchased and counts received may fluctuate during the fulfilment process. If supplies are low, Global Contact Hub will get in touch with the customer.</p>
+              <p><span style="text-decoration: underline;font-weight: bold;">4. Regarding email response, open rates, click through rates, or other indicators of email marketing effectiveness, Global Contact Hub offers no guarantees or promises. Customer hereby releases NDG from any/all liability related to Customer's use of the provided data and Customer's violation of such laws and agrees to comply with all federal, state, and local laws, including but not limited to rules pertaining to the U.S. CAN-SPAM legislation or the Canadian CASL.</span></p>
+            </div>
+            <br>
+            <div class="box">
+              <h3>Refund of Policy</h3>
+              <p>The same rule applies to databases and email marketing as to software: once accessed or downloaded, a transaction is complete. Due to the sensitive nature of the data, all sales are final and non-refundable. You create a legally enforceable purchase contract by completing your order and supplying your contact information. Our databases have been safeguarded in this way against fraud and data thieves in order to maintain their integrity.*No warranties or assurances are provided with the sale of the data.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        <div class="blog-comments ">
+          <!-- <div class="reply-form"> -->
+            <h5><b>Disclaimer of Warranty</b></h5>
+            <p>Without any explicit or implied guarantees, including but not limited to warranties of merchantability, fitness for a specific purpose, or non-infringement, the site and its contents are supplied "as is." You understand that the site's functioning might not always be smooth or error-free. The site may include references to and links to the goods and services of unaffiliated businesses. These citations and links are given "as is" and without any stated or implied warranties of any sort. The satisfaction guarantee may not apply in some cases because of situations that are out of Global Contact Hub's control. Please be aware that the following are not within our scope of responsibility: typographical, punctuational, or grammatical errors made by the customer; poor quality or low resolution of uploaded images; design mistakes made during the document creation process by the customer; mistakes in user-selected options such as finish, quantity, or product type; and damage to the products occurring after delivery to the customer. Prior to making your purchase, thoroughly examine your designs and fix any flaws. Prior to processing, Global Contact Hub does not proofread any of its clients' documents.</p>
+            <br>
+            <h5><b>Limitation of Liability</b></h5>
+            <p>No matter whether Global Contact Hub has been informed of the possibility of damage, neither Global Contact Hub nor its officers, directors, employees, or agents shall be liable for any special, incidental, indirect, or consequential damages of any kind, or for any damages whatsoever resulting from loss of use, data, or profits, arising out of or in connection with the use or performance of the website, or from the failure to deliver products or services. In no circumstance will Global Contact Hub be held accountable or liable for any damages or effects brought on by or connected to your improper or misuse of the website or its contents.</p>
+          </div>
+
+        </div><!-- End blog comments -->
+      </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+
+  </main><!-- End #main -->
+  <br><br>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+            <h4>Subscribe for New Offers</h4>
+
+          </div>
+          <div class="col-lg-8">
+            <form action="#local-form-handler" method="post">
+              <div class="row">
+                <div class="col-lg-4">
+                  <input type="text" name="name" placeholder="Your Full Name" id="name" class="form-control" required>
+                </div>
+                <div class="col-lg-5">
+                  <input type="email" name="email" placeholder="Your Email" id="email" class="form-control" required>
+                </div>
+                <div class="col-lg-3" style="display: none;">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                    value="Please Subscribe Me">
+                </div>
+                <div class="col-lg-3" style="display: none;">
+                  <input type="text" class="form-control" name="message" id="message" placeholder="message"
+                    value="Please Update Me New Offers">
+                </div>
+                <div class="col-lg-3">
+                  <input type="submit" value="Subscribe">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-12 footer-info">
+            <a href="../index.html" class="logo d-flex align-items-center">
+              <img src="/assets/img/logo-gch-mark.svg" alt="Global Contact Hub Logo">
+              <span>Global Contact Hub</span>
+            </a>
+            <p><b>Good Info Gets Affordable</b><br>
+              Improve your efficiency and productivity with our accurate and customized data.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="../index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../About-Us/index.html">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Contact-us/index.html">Contact Us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Pay-Now/index.html">Pay Now</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Inbound/index.html">Inbound</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../OutBound/index.html">OutBound</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Automotive-Industry-List/index.html">Automotive Industry
+                  List</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Aviation-Industry/index.html">Aviation Industry</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Chemical-Industry/index.html">Chemicals Email List</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Education-Sector/index.html">Education Sector</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Finance-Industry/index.html">Finance Industry</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Healthcare-Industry/index.html">Healthcare Industry</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              44538 15th St E Suite 5 Lancaster,<br>CA 93535<br><br>
+              <strong>Phone: </strong><a href="tel:+16614512161">+1 661-451-2161</a><br>
+              <strong>Email: </strong><a href="mailto:info@globalcontacthub.com">info@globalcontacthub.com</a><br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyrights <strong><span>Global Contact Hub</span></strong>. All Rights Reserved
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+  <div class="sticky-mailus">
+    <a href="mailto:info@globalcontacthub.com"><i class="bi bi-envelope" title="Mail Us"></i></a>
+    <a href="tel:+16614512161"><i class="bi bi-telephone" title="Call Us"></i></a>
+    <a href="../Contact-us/index.html#contact"><i class="bi bi-alarm" title="Schedule a Call"></i></a>
+  </div>
+  <a  class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+<!-- Google tag (gtag.js) -->
+<script async src="../_external/www.googletagmanager.com/gtag/js-671d634053"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-05NSP5GF07');
+</script>
+  <script src="../assets/vendor/purecounter/purecounter.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+  <script src="../assets/js/local-form-fallback.js" defer></script>
+</body>
+
+
+<!-- Mirrored from www.globalcontacthub.com/Automotive-Email-List by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Mar 2023 14:45:21 GMT -->
+</html>

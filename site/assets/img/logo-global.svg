@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Global Contact Hub logo</title>
+  <desc id="logoDesc">A globe-shaped G icon for Global Contact Hub.</desc>
+  <defs>
+    <linearGradient id="gcBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9bdcff"/>
+      <stop offset="100%" stop-color="#0a63b8"/>
+    </linearGradient>
+    <radialGradient id="gcFill" cx="40%" cy="35%" r="75%">
+      <stop offset="0%" stop-color="#e8f7ff"/>
+      <stop offset="100%" stop-color="#c3e6ff"/>
+    </linearGradient>
+    <linearGradient id="gcAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#29d0de"/>
+      <stop offset="100%" stop-color="#6f47ef"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4 5)">
+    <circle cx="27" cy="27" r="25" fill="url(#gcBlue)"/>
+    <circle cx="27" cy="27" r="18.5" fill="url(#gcFill)"/>
+    <path d="M13 27 C17 20 22 15 28 13 C26 18 26 23 29 27 C25 33 20 38 13 43 Z" fill="#ffffff" opacity="0.96"/>
+    <path d="M27 13 C36 13 43 17 48 23 C43 21 39 20 35 20 C33 17 30 14 27 13 Z" fill="#ffffff" opacity="0.92"/>
+    <path d="M21 42 C25 44 29 45 33 44 C37 47 42 48 47 47 C42 51 35 53 28 53 C24 53 20 52 18 50 Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M49 34 C46 42 40 47 32 50 L20 50 C34 45 41 38 42 27 L29 27 L33 22 H51 C52 26 52 30 49 34 Z" fill="#0d73c6"/>
+    <path d="M16 8 L21 5" stroke="url(#gcAccent)" stroke-width="2.8" stroke-linecap="round"/>
+    <circle cx="49" cy="8" r="3.7" fill="#6f47ef"/>
+  </g>
+</svg>

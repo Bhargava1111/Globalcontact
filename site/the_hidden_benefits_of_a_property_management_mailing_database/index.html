@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>The Hidden Benefits of a Property Management Mailing Database</title>
+  <meta content="Look no further than the hidden benefits of a property management mailing database. In an industry where time is money, having access to a up-to-date database" name="description">
+  <meta content="Property Management Mailing Database" name="keywords">
+<link rel="canonical" href="index.html" />
+
+   <!-- Favicons -->
+  <link href="../assets/img/favicon.webp" rel="icon">
+  <link href="../assets/img/apple-touch-icon.webp" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="../assets/css/googleFonts.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="overlay" id="enquiryPopup">
+    <div class="popup-content">
+        <button class="close-button" id="closeButton" >&times;</button>
+        <h2>Quick Enquiry</h2>
+        <p>Got a question? Contact us Quickly and easily using the following form and we will get back to you ASAP!</p>
+         <form action="#local-form-handler" method="post" id="contactForm" class="contact-form">
+            <label for="phone">Phone Number:</label>
+            <input type="text" name="phone" id="phone-number" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email-id" required>
+            <label for="message">Message:</label>
+            <textarea id="message-text1" name="message" required></textarea>
+            <button class="blue" type="submit">Submit</button>
+        </form>
+        <div id="successPopup" style="display: none;">
+              <p>Message sent successfully!</p>
+          </div>
+          <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var form = event.target;
+            var formData = new FormData(form);
+
+            var xhr = new XMLHttpRequest();
+            console.info("Local clone form submission intercepted.");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        document.getElementById("successPopup").style.display = "block";
+                        form.reset(); // Clear the form after successful submission
+                        setTimeout(function() {
+                            document.getElementById("successPopup").style.display = "none";
+                        }, 3000); // Hide the success message after 3 seconds (3000 milliseconds)
+                    } else {
+                        alert("Failed to send the message. Please try again later.");
+                    }
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="../index.html" class="logo d-flex align-items-center">
+        <img src="/assets/img/logo-gch-mark.svg" alt="Global Contact Hub">
+        <span>Global Contact Hub</span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="../index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="../About-Us/index.html">About Us</a></li>
+          <li class="dropdown"><a class="active" ><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="../Automotive-Industry-List/index.html"><span>Automotive Industry List</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../Automobile-Industry-Email-List/index.html">Automobile Industry Email List</a></li>
+                  <li><a href="../Automotive-Email-List/index.html">Automotive Email List</a></li>
+                  <li><a href="../Auto-Dealers-Email-List/index.html">Auto Dealers Email List</a></li>
+                  <li><a href="../New-Car-Dealer-Email-List/index.html">New Car Dealers Email List</a></li>
+                  <li><a href="../Used-Car-Dealers-Email-List/index.html">Used Car Dealers Email List</a></li>
+                  <li><a href="../automotive-more-industries/index.html">&amp; Many more</a></li>
+                </ul>
+              </li>
+              <li><a class="nav-link scrollto" href="../Aviation-Industry/index.html">Aviation Industry</a></li>
+              <li class="dropdown"><a href="../Chemical-Industry/index.html"><span>Chemical Industry</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../Chemicals-Email-List/index.html">Chemicals Email List</a></li>
+                  <li><a href="../Equipments-Manufactures-Email-List/index.html">Equipments Manufactures Email List</a></li>
+                  <li><a href="../Laboratories-Email-List/index.html">Laboratories Email List</a></li>
+                  <li><a href="../Pharmaceuticals-Email-List/index.html">Pharmaceuticals Email List</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="../Education-Sector/index.html"><span>Education Sector</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../Charter-Schools-Email-List/index.html">Charter Schools Email List</a></li>
+                  <li><a href="../Colleges-and-Universities-Email-List/index.html">Colleges and Universities Email List</a></li>
+                  <li><a href="../K-12-Schools-Email-List/index.html">K-12 Schools Email List</a></li>
+                  <li><a href="../Principals-Email-List/index.html">Principals Email List</a></li>
+                  <li><a href="../Schools-Districts-Email-List/index.html">Schools Districts Email List</a></li>
+                  <li><a href="../Schools-Email-List/index.html">Schools Email List</a></li>
+                  <li><a href="../Teachers-Email-List/index.html">Teachers Email List</a></li>
+		    <li><a href="../education-sector-more-industries-list/index.html">&amp; Many more</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="../Finance-Industry/index.html"><span>Finance Industry</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../Banking-Email-List/index.html">Banking Email List</a></li>
+                  <li><a href="../Credit-Unions-Email-List/index.html">Credit Unions Email List</a></li>
+                  <li><a href="../Finance-Industry-Email-List/index.html">Finance Industry Email List</a></li>
+                  <li><a href="../Insurance-Agents-List/index.html">Insurance Agents List</a></li>
+                  <li><a href="../Mortgage-Loan-Brokers-Email-List/index.html">Mortgage Loan Brokers Email List</a></li>
+                  <li><a href="../finance-more-industries/index.html">&amp; Many more</a></li>
+                  <!-- <li><a href="../real-estate-agents-email-list/index.html">Real Estate Agents Email List</a></li> -->
+                </ul>
+              </li>
+              <li class="dropdown"><a href="../Healthcare-Industry/index.html"><span>Healthcare Industry</span> <i
+                    class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="../Clinics-Email-List/index.html">Clinics Email List</a></li>
+                  <li><a href="../Dentists-Email-List/index.html">Dentists Email List</a></li>
+                  <li><a href="../Hospitals-Email-List/index.html">Hospitals Email List</a></li>
+                  <li><a href="../Medical-Equipment-Dealers-List/index.html">Medical Equipment Dealers List</a></li>
+                  <li><a href="../Nurses-Email-List/index.html">Nurses Email List</a></li>
+                  <li><a href="../Pharmaceutical-Email-List/index.html">Pharmaceutical Email List</a></li>
+                  <li><a href="../Physicians-and-Surgeons-Email-List/index.html">Physicians and Surgeons Email List</a></li>
+                  <li><a href="../healthcare-more-industries/index.html">&amp; Many more</a></li>
+
+                </ul>
+              </li>
+              <li><a href="../IT-Emailing-List/index.html">IT Emailing List</a></li>
+              <li><a href="../Oil-and-Gas-Industry-List/index.html">Oil and Gas Industry List</a></li>
+              <li><a href="../Real-Estate-Mailing-List/index.html">Real Estate Mailing List</a></li>
+              <li><a href="../property-management-email-list/index.html">Property Management Email List</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../Contact-us/index.html">Contact Us</a></li>
+          <li><a class="nav-link scrollto" href="../blog/index.html">Blog</a></li>
+          <li><a class="nav-link scrollto" href="../Pay-Now/index.html">Pay Now</a></li>
+          <li><a class="nav-link scrollto" href="../browse-data-cards/index.html">Browse Data Cards</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li>The Hidden Benefits of a Property Management Mailing Database: Maximizing Efficiency and Profitability</li>
+        </ol>
+        <h1>The Hidden Benefits of a Property Management Mailing Database: Maximizing Efficiency and Profitability</h1>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="../assets/img/blog/the_hidden_benefits_of_a_property_management_mailing_database.jpg" alt="dental Laboratories image" width="100%" height="100%" class="img-fluid">
+              </div>
+
+              <h1 class="entry-title">
+                <a href="index.html">The Hidden Benefits of a Property Management Mailing Database: Maximizing Efficiency and Profitability</a>
+              </h1>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="../unlocking-the-power-of-real-estate-email-lists-for-your-business/index.html">Admin</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="../unlocking-the-power-of-real-estate-email-lists-for-your-business/index.html"><time datetime="2020-05-07">May 7, 2023</time></a></li>
+                  <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="../blog-single/index.html">12 Comments</a></li> -->
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                    Are you a property manager looking to take your business to the next level? Look no further than the hidden benefits of a property management mailing database. In an industry where time is money, having access to a comprehensive and up-to-date database can be a game-changer. 
+                </p>
+
+                <p>
+                    From streamlining communication with tenants and property owners to maximizing efficiency in operations, a property management mailing database offers countless advantages for your business. With the ability to easily send targeted messages, schedule maintenance reminders, and track rental payments, you can effortlessly stay on top of your properties and ensure a smooth running operation. 
+                </p>
+
+                <blockquote>
+                  <p>
+                    A property management mailing database offers numerous advantages for property managers. 
+                  </p>
+                </blockquote>
+
+                <p>
+                    But the benefits don't stop there. By leveraging the power of data analytics, you can gain valuable insights into tenant preferences, market trends, and more, enabling you to make informed decisions that drive profitability. In this article, we will explore the hidden benefits of a property management mailing database and how it can help you maximize efficiency and profitability in your business.
+                </p>
+
+                <h3>Understanding the benefits of a property management mailing database</h3>
+                <p>
+                    A property management mailing database offers numerous advantages for property managers. It allows you to streamline communication with tenants and property owners, making it easier than ever to stay in touch. With just a few clicks, you can send targeted messages, schedule maintenance reminders, and track rental payments.
+                </p>
+                <p>
+                    But the benefits go beyond just communication. By leveraging the power of data analytics, you can gain valuable insights into tenant preferences, market trends, and more. This enables you to make informed decisions that drive profitability. 
+                </p>
+                <p>
+                    With a property management mailing database, you can understand what your tenants want and tailor your services to meet their needs. This not only improves tenant satisfaction but also helps you attract and retain high-quality tenants in the long run.
+                </p>
+                
+                <img src="../assets/img/blog/blog_image_for_the_hidden_benefits_of_a_property_management.jpg" class="img-fluid" alt="blog image for the hidden benefits of a property management">
+
+                <h3>Streamlining tenant communication with a mailing database</h3>
+                <p>
+                    Communication is key in the property management industry. With a property management mailing database, you can streamline your communication efforts and ensure that important messages reach the right people at the right time. Whether it's sending lease renewal notices or notifying tenants about upcoming maintenance, a mailing database makes it easy to stay organized and efficient.
+                </p>
+                <p>
+                    In addition to streamlining communication, a property management mailing database also allows for personalized and targeted outreach. You can segment your database based on various criteria such as lease end dates, property type, or tenant preferences. This enables you to send tailored messages that resonate with your audience, increasing the likelihood of engagement and response.
+                </p>
+
+                <h3> Enhancing marketing efforts with a property management mailing database</h3>
+                <p>
+                    Marketing plays a crucial role in attracting new tenants and filling vacancies. With a property management mailing database, you can take your marketing efforts to the next level. By segmenting your database and understanding tenant preferences, you can create targeted marketing campaigns that are more likely to convert.
+                </p>
+                <p>
+                    For example, if you have a property that is pet-friendly, you can send targeted emails to tenants who have expressed interest in pet-friendly housing. Similarly, if you have a property in a specific neighborhood, you can send targeted mailers to potential tenants in that area. 
+                </p>  
+                <p>
+                    By tailoring your marketing efforts to the specific needs and preferences of your target audience, you can increase your chances of success and maximize your return on investment.
+                </p>              
+      
+                <h3> Choosing the right property management mailing database provider</h3>
+                <p>
+                    When it comes to choosing a property management mailing database provider, there are several factors to consider. First and foremost, you need to ensure that the provider offers a comprehensive and up-to-date database that meets your specific needs.
+                </p>
+                <p>
+                    You should also consider the provider's track record and reputation in the industry. Look for providers with a proven track record of success and positive reviews from other property managers.
+                </p>
+                <p>
+                    Additionally, it's important to consider the provider's customer support and training options. A good provider should offer ongoing support and training to help you make the most of your mailing database and address any issues or concerns that may arise.
+                </p>
+                <h3>Conclusion</h3>
+                <p>
+                    In today's fast-paced property management industry, staying ahead of the competition is crucial. A property management mailing database offers numerous hidden benefits that can help you do just that. From streamlining communication with tenants and property owners to enhancing marketing efforts and leveraging data analytics, a mailing database provides the tools you need to maximize efficiency and profitability.
+                </p>
+                <p>
+                    So, if you're ready to take your property management business to the next level, it's time to embrace the power of a property management mailing database. By investing in a comprehensive and up-to-date database, you can streamline your workflows, make informed decisions, and drive long-term success. Don't miss out on the hidden benefits that a property management mailing database has to offer. Start maximizing your efficiency and profitability today!
+                </p>
+
+                
+              </div>
+
+              <div class="entry-footer">
+
+                <i class="bi bi-tags"></i>
+                <ul class="tags">
+                  <li><a href="../Real-Estate-Mailing-List/index.html">Real Estate</a></li>
+                  <li><a href="../property-management-email-list/index.html">Property Management</a></li>
+                </ul>
+              </div>
+
+            </article><!-- End blog entry -->
+
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                <div class="post-item clearfix">
+                  <img src="../assets/img/blog/doctor-images.jpg" alt="doctor images">
+                  <h4><a href="../how-to-buy-doctors-email-lists-for-effective-email-marketing/index.html">How to Buy Doctors Email Lists for Effective Email Marketing</a></h4>
+                  <time datetime="2020-02-12">Feb 12, 2023</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="../assets/img/blog/hospitals-images.jpg" alt="hospitals image">
+                  <h4><a href="../how-every-hospital-can-improve-their-service-quickly/index.html">How Every Hospital Can Improve Their Service Quickly</a></h4>
+                  <time datetime="2020-02-01">Feb 1, 2023</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="../assets/img/blog/dental-email-1170x780.jpg" alt="dental image">
+                  <h4><a href="../how-to-use-dentist-email-lists-for-your-business/index.html">How to Use Dentist Email Lists For your Business</a></h4>
+                  <time datetime="2023-13-01">Jan 13, 2023</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="../assets/img/blog/best-pharmaceutical-email-list.jpg" alt="pharmaceutical image">
+                  <h4><a href="../how-to-choose-the-best-pharmaceutical-email-list/index.html">How to choose the best Pharmaceutical Email list</a></h4>
+                  <time datetime="2023-10-01">Jan 10, 2023</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="../assets/img/blog/offshore-production-platform-sea-oil-gas-production_image.jpg" alt="offshore production image">
+                  <h4><a href="../the-future-of-offshore-oil-and-gas-exploration-innovations-and-challenges/index.html">The Future of Offshore Oil and Gas Exploration: Innovations and Challenges</a></h4>
+                  <time datetime="2020-03-17">Mar 17, 2023</time>
+                </div>
+
+              </div><!-- End sidebar recent posts-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+            <h4>Subscribe for New Offers</h4>
+
+          </div>
+          <div class="col-lg-8">
+            <form action="#local-form-handler" method="post">
+              <div class="row">
+                <div class="col-lg-4">
+                  <input type="text" name="name" placeholder="Your Full Name" id="name" class="form-control" required>
+                </div>
+                <div class="col-lg-5">
+                  <input type="email" name="email" placeholder="Your Email" id="email" class="form-control" required>
+                </div>
+                <div class="col-lg-3" style="display: none;">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                    value="Please Subscribe Me">
+                </div>
+                <div class="col-lg-3" style="display: none;">
+                  <input type="text" class="form-control" name="message" id="message" placeholder="message"
+                    value="Please Update Me New Offers">
+                </div>
+                <div class="col-lg-3">
+                  <input type="submit" value="Subscribe">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='../_external/embed.tawk.to/6433cf544247f20fefeac3d0/1gtl63peb';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-12 footer-info">
+            <a href="../index.html" class="logo d-flex align-items-center">
+              <img src="/assets/img/logo-gch-mark.svg" alt="Global Contact Hub Logo">
+              <span>Global Contact Hub</span>
+            </a>
+            <p><b>Good Info Gets Affordable</b><br>
+              Improve your efficiency and productivity with our accurate and customized data.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a  class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="../index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../About-Us/index.html">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Contact-us/index.html">Contact Us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Pay-Now/index.html">Pay Now</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../terms-and-conditions/index.html">Terms & Conditions</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../privacy-policy/index.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Automotive-Industry-List/index.html">Automotive Industry
+                  List</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Aviation-Industry/index.html">Aviation Industry</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Chemical-Industry/index.html">Chemicals Email List</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Education-Sector/index.html">Education Sector</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Finance-Industry/index.html">Finance Industry</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Healthcare-Industry/index.html">Healthcare Industry</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              44538 15th St E Suite 5 Lancaster,<br>CA 93535<br><br>
+              <strong>Phone: </strong><a href="tel:+16614512161">+1 661-451-2161</a><br>
+              <strong>Email: </strong><a href="mailto:info@globalcontacthub.com">info@globalcontacthub.com</a><br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyrights <strong><span>Global Contact Hub</span></strong>. All Rights Reserved
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+  <div class="sticky-mailus">
+    <a href="mailto:info@globalcontacthub.com"><i class="bi bi-envelope" title="Mail Us"></i></a>
+    <a href="tel:+16614512161"><i class="bi bi-telephone" title="Call Us"></i></a>
+    <a href="../Contact-us/index.html#contact"><i class="bi bi-alarm" title="Schedule a Call"></i></a>
+  </div>
+  <a  class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+<!-- Google tag (gtag.js) -->
+<script async src="../_external/www.googletagmanager.com/gtag/js-671d634053"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-05NSP5GF07');
+</script>
+  <script src="../assets/vendor/purecounter/purecounter.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+  <script src="../assets/js/local-form-fallback.js" defer></script>
+</body>
+
+</html>

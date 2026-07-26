@@ -1,0 +1,48 @@
+Global Contact Hub site report
+==============================
+
+Output root:
+- site/
+
+Generated content:
+- 230 HTML files
+- 826 total files
+
+How to run locally:
+- npm install
+- npm start
+
+Netlify deployment:
+- Publish directory: `site`
+- Functions directory: `netlify/functions`
+- Redirects/config: `netlify.toml`
+- Required environment variables: `SITE_NAME`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `CONTACT_RECIPIENTS`
+
+Verified locally:
+- /
+- /About-Us/
+- /browse-data-cards/
+- /search/
+- /assets/css/style.css
+- /assets/js/local-form-fallback.js
+- /assets/img/clients/client-1.webp
+- /api/contact
+
+Notes:
+- Site branding was updated to Global Contact Hub across the mirrored pages.
+- Primary contact phone was updated to `+1 661-451-2161`.
+- Primary contact email was updated to `info@globalcontacthub.com`.
+- Legacy contact references were updated to `robert.h@globalcontacthub.com`.
+- The homepage anniversary popup now shows `5 years`.
+- The popup artwork was redesigned to keep the gold stage style of the original `9 years` visual while changing the number to `5`.
+- WhatsApp redirects now point to `+91 8106768968`.
+- Internal page links were rewritten to local relative paths.
+- Service catalog links and service landing pages are now fully localized within the clone.
+- External links such as mailto, tel, WhatsApp, review links, and social links were preserved.
+- Cloned enquiry and contact forms now submit to a backend email handler and send automatic email notifications to `info@globalcontacthub.com` and `robert.h@globalcontacthub.com`.
+- Remaining legacy internal URL references were rewritten to local paths, including service metadata references where local pages exist.
+- A local `search/` fallback page was added because the corresponding live route returns 404.
+- Missing live-site client slider images were replaced with local placeholders so the homepage stays self-contained.
+- ImageKit-hosted social/SEO images were downloaded and localized into `_external/ik.imagekit.io/`.
+- The last Bootstrap Icons CDN dependency was replaced with the local mirrored stylesheet.
+- The project now includes both a local Express server for development and a Netlify Function for deployment form handling.

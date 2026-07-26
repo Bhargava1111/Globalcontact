@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" viewBox="0 0 900 720" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">Global Contact Hub hero illustration</title>
+  <desc id="heroDesc">Abstract business network illustration with connected nodes and analytics panels.</desc>
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecfbff"/>
+      <stop offset="55%" stop-color="#eef2ff"/>
+      <stop offset="100%" stop-color="#f7ecff"/>
+    </linearGradient>
+    <linearGradient id="heroMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#39d9ea"/>
+      <stop offset="50%" stop-color="#4375ff"/>
+      <stop offset="100%" stop-color="#8f3ff4"/>
+    </linearGradient>
+    <linearGradient id="heroAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#87efff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <filter id="heroShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#2c3c86" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect width="900" height="720" rx="36" fill="url(#heroBg)"/>
+  <circle cx="690" cy="126" r="86" fill="#dce5ff"/>
+  <circle cx="204" cy="592" r="100" fill="#daf9ff"/>
+  <path d="M126 204 C222 108 384 96 486 188 C560 254 588 362 541 444 C503 510 434 555 350 560 C248 566 160 520 120 438 C89 374 89 272 126 204 Z" fill="url(#heroMain)" opacity="0.13"/>
+
+  <g transform="translate(190 118)" filter="url(#heroShadow)">
+    <rect x="0" y="0" width="520" height="360" rx="28" fill="#ffffff"/>
+    <rect x="34" y="32" width="160" height="14" rx="7" fill="#d5def9"/>
+    <rect x="34" y="64" width="108" height="10" rx="5" fill="#e7edff"/>
+    <rect x="34" y="110" width="204" height="196" rx="22" fill="#f6f8ff"/>
+    <polyline points="64,254 104,200 144,228 190,164 228,188" fill="none" stroke="url(#heroMain)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="64" cy="254" r="9" fill="#39d9ea"/>
+    <circle cx="104" cy="200" r="9" fill="#4375ff"/>
+    <circle cx="144" cy="228" r="9" fill="#60d7ff"/>
+    <circle cx="190" cy="164" r="9" fill="#8f3ff4"/>
+    <circle cx="228" cy="188" r="9" fill="#4375ff"/>
+
+    <rect x="264" y="110" width="220" height="92" rx="22" fill="url(#heroMain)"/>
+    <rect x="288" y="136" width="102" height="12" rx="6" fill="#d7fbff" opacity="0.8"/>
+    <rect x="288" y="162" width="70" height="38" rx="12" fill="#ffffff" opacity="0.24"/>
+    <rect x="368" y="162" width="92" height="14" rx="7" fill="#d7fbff" opacity="0.78"/>
+    <rect x="368" y="186" width="62" height="10" rx="5" fill="#d7fbff" opacity="0.5"/>
+
+    <rect x="264" y="222" width="220" height="84" rx="20" fill="#f6f8ff"/>
+    <rect x="288" y="246" width="124" height="12" rx="6" fill="#d5def9"/>
+    <rect x="288" y="274" width="164" height="10" rx="5" fill="#e3eafc"/>
+    <rect x="288" y="296" width="136" height="10" rx="5" fill="#e3eafc"/>
+
+    <path d="M72 332 C144 286 214 286 286 332" fill="none" stroke="#c9d7ff" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="72" cy="332" r="20" fill="#ffffff" stroke="#d4e0ff" stroke-width="8"/>
+    <circle cx="180" cy="332" r="20" fill="#ffffff" stroke="#d4e0ff" stroke-width="8"/>
+    <circle cx="286" cy="332" r="20" fill="#ffffff" stroke="#d4e0ff" stroke-width="8"/>
+    <circle cx="72" cy="332" r="8" fill="#39d9ea"/>
+    <circle cx="180" cy="332" r="8" fill="#4375ff"/>
+    <circle cx="286" cy="332" r="8" fill="#8f3ff4"/>
+  </g>
+
+  <g transform="translate(596 450)" filter="url(#heroShadow)">
+    <rect x="0" y="0" width="190" height="132" rx="26" fill="#ffffff"/>
+    <rect x="24" y="24" width="76" height="10" rx="5" fill="#d8e2fb"/>
+    <rect x="24" y="48" width="52" height="34" rx="12" fill="url(#heroMain)" opacity="0.92"/>
+    <rect x="88" y="48" width="76" height="12" rx="6" fill="#d8e2fb"/>
+    <rect x="88" y="70" width="58" height="10" rx="5" fill="#e6ecfd"/>
+    <circle cx="38" cy="104" r="8" fill="#39d9ea"/>
+    <circle cx="66" cy="104" r="8" fill="#4375ff"/>
+    <circle cx="94" cy="104" r="8" fill="#8f3ff4"/>
+  </g>
+
+  <g opacity="0.92">
+    <path d="M148 602 C220 540 314 520 404 544" fill="none" stroke="url(#heroMain)" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="148" cy="602" r="13" fill="#39d9ea"/>
+    <circle cx="404" cy="544" r="13" fill="#8f3ff4"/>
+    <path d="M652 194 C726 228 778 288 804 362" fill="none" stroke="url(#heroMain)" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="652" cy="194" r="11" fill="#4375ff"/>
+    <circle cx="804" cy="362" r="11" fill="#39d9ea"/>
+  </g>
+
+  <g fill="url(#heroAccent)" opacity="0.75">
+    <circle cx="114" cy="98" r="7"/>
+    <circle cx="780" cy="112" r="8"/>
+    <circle cx="836" cy="224" r="6"/>
+    <circle cx="84" cy="288" r="5"/>
+    <circle cx="730" cy="640" r="7"/>
+    <circle cx="332" cy="654" r="5"/>
+  </g>
+</svg>
