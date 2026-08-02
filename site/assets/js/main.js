@@ -23,10 +23,15 @@
    * Easy event listener function
    */
   const on = (type, el, listener, all = false) => {
+    const elements = select(el, all)
+    if (!elements) {
+      return
+    }
+
     if (all) {
-      select(el, all).forEach(e => e.addEventListener(type, listener))
+      elements.forEach(e => e.addEventListener(type, listener))
     } else {
-      select(el, all).addEventListener(type, listener)
+      elements.addEventListener(type, listener)
     }
   }
 
@@ -110,21 +115,102 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
+  const navbar = select('#navbar')
+  let mobileNavToggle = select('.mobile-nav-toggle')
+
+  if (mobileNavToggle && mobileNavToggle.tagName === 'I') {
+    const toggleButton = document.createElement('button')
+    toggleButton.type = 'button'
+    toggleButton.className = mobileNavToggle.className
+    toggleButton.setAttribute('aria-label', 'Open navigation menu')
+    mobileNavToggle.replaceWith(toggleButton)
+    mobileNavToggle = toggleButton
+  }
+
+  const setMobileNavState = (isOpen) => {
+    if (!navbar || !mobileNavToggle) {
+      return
+    }
+
+    navbar.classList.toggle('navbar-mobile', isOpen)
+    mobileNavToggle.classList.toggle('bi-list', !isOpen)
+    mobileNavToggle.classList.toggle('bi-x', isOpen)
+    mobileNavToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
+    mobileNavToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu')
+    document.body.classList.toggle('mobile-nav-active', isOpen)
+  }
+
+  const toggleMobileNav = () => {
+    if (!navbar) {
+      return
+    }
+
+    setMobileNavState(!navbar.classList.contains('navbar-mobile'))
+  }
+
+  const handleMobileNavToggle = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    toggleMobileNav()
+  }
+
+  if (mobileNavToggle && navbar) {
+    mobileNavToggle.setAttribute('role', 'button')
+    mobileNavToggle.setAttribute('aria-label', 'Open navigation menu')
+    mobileNavToggle.setAttribute('aria-expanded', 'false')
+    mobileNavToggle.setAttribute('tabindex', '0')
+
+    mobileNavToggle.addEventListener('click', handleMobileNavToggle)
+
+    mobileNavToggle.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        handleMobileNavToggle(e)
+      }
+    })
+  }
+
+  setMobileNavState(false)
 
   /**
    * Mobile nav dropdowns activate
    */
   on('click', '.navbar .dropdown > a', function(e) {
-    if (select('#navbar').classList.contains('navbar-mobile')) {
+    if (navbar && navbar.classList.contains('navbar-mobile')) {
       e.preventDefault()
-      this.nextElementSibling.classList.toggle('dropdown-active')
+      if (this.nextElementSibling) {
+        this.nextElementSibling.classList.toggle('dropdown-active')
+      }
     }
   }, true)
+
+  on('click', '.navbar-mobile a[href]', function() {
+    if (!navbar || !navbar.classList.contains('navbar-mobile')) {
+      return
+    }
+
+    const parentItem = this.closest('li')
+    if (parentItem && parentItem.classList.contains('dropdown') && this === parentItem.querySelector(':scope > a')) {
+      return
+    }
+
+    setMobileNavState(false)
+  }, true)
+
+  navbar?.addEventListener('click', function(e) {
+    if (!navbar.classList.contains('navbar-mobile')) {
+      return
+    }
+
+    if (e.target === navbar) {
+      setMobileNavState(false)
+    }
+  })
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 991 && navbar && navbar.classList.contains('navbar-mobile')) {
+      setMobileNavState(false)
+    }
+  })
 
   /**
    * Scrool with ofset on links with a class name .scrollto
@@ -133,12 +219,8 @@
     if (select(this.hash)) {
       e.preventDefault()
 
-      let navbar = select('#navbar')
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
+      if (navbar && navbar.classList.contains('navbar-mobile')) {
+        setMobileNavState(false)
       }
       scrollto(this.hash)
     }
@@ -158,7 +240,7 @@
   /**
    * Clients Slider
    */
-  new Swiper('.clients-slider', {
+  if (select('.clients-slider')) new Swiper('.clients-slider', {
     speed: 400,
     loop: true,
     autoplay: {
@@ -223,14 +305,16 @@
   /**
    * Initiate portfolio lightbox 
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfokio-lightbox'
-  });
+  if (select('.portfokio-lightbox')) {
+    GLightbox({
+      selector: '.portfokio-lightbox'
+    });
+  }
 
   /**
    * Portfolio details slider
    */
-  new Swiper('.portfolio-details-slider', {
+  if (select('.portfolio-details-slider')) new Swiper('.portfolio-details-slider', {
     speed: 400,
     autoplay: {
       delay: 5000,
@@ -246,7 +330,7 @@
   /**
    * Testimonials slider
    */
-  new Swiper('.testimonials-slider', {
+  if (select('.testimonials-slider')) new Swiper('.testimonials-slider', {
     speed: 600,
     loop: true,
     autoplay: {
@@ -387,4 +471,7 @@ function hideEnquiryPopup() {
 setTimeout(showEnquiryPopup, 5000);
 
 // Event listener for the close button
-document.getElementById("closeButton").addEventListener("click", hideEnquiryPopup);
+const closeButton = document.getElementById("closeButton");
+if (closeButton) {
+  closeButton.addEventListener("click", hideEnquiryPopup);
+}

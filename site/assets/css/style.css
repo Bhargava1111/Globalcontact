@@ -181,49 +181,167 @@ section {
 .header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 20px 0;
+  padding: 14px 0;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(1, 41, 112, 0.08);
 }
 
 .header.header-scrolled {
-  background: #fff;
-  padding: 15px 0;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 10px 0;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
 }
 
+.header .container-fluid.container-xl {
+  gap: 16px;
+}
+
 .header .logo {
-  line-height: 0;
+  line-height: 1.1;
   display: inline-flex;
   align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  min-width: 0;
+  max-width: none;
+  text-decoration: none;
 }
 
 .header .logo img {
-  width: auto;
-  height: 78px;
-  max-height: 78px;
+  content: url("/assets/img/logo-gch-icon.png");
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  max-width: 58px;
+  max-height: 58px;
+  object-fit: contain;
+  display: block;
   flex: 0 0 auto;
   margin-right: 0;
+  filter: drop-shadow(0 2px 6px rgba(1, 41, 112, 0.12));
 }
 
 .header .logo span {
-  display: none;
-  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
   font-weight: 800;
-  letter-spacing: 0.2px;
-  color: #071b55;
+  letter-spacing: 0.08em;
+  color: #012970;
   font-family: "Nunito", sans-serif;
-  line-height: 1;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.header .logo span::before {
+  content: "Global Contact Hub";
+  font-size: 19px;
+  letter-spacing: 0.06em;
+  color: #012970;
+}
+
+.header .logo span::after {
+  content: "Connecting Business Across The World";
+  margin-top: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #4154f1;
+}
+
+.header .logo:not(:has(span))::after {
+  content: "Global Contact Hub";
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #012970;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1400px) {
+  .navbar a,
+  .navbar a:focus {
+    padding: 10px 0 10px 18px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header .logo img {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .header .logo span::before,
+  .header .logo:not(:has(span))::after {
+    font-size: 17px;
+  }
+
+  .header .logo span::after {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    padding: 10px 0 10px 14px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 992px) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .header .logo {
+    gap: 10px;
+    max-width: calc(100% - 52px);
+  }
+
   .header .logo img {
-    width: auto;
-    height: 78px;
-    max-height: 78px;
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    max-width: 46px;
+    max-height: 46px;
     margin-right: 0;
   }
 
-  .header .logo span {
+  .header .logo span::before,
+  .header .logo:not(:has(span))::after {
+    font-size: 15px;
+  }
+
+  .header .logo span::after {
     display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .logo {
+    gap: 8px;
+  }
+
+  .header .logo img {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    max-width: 38px;
+    max-height: 38px;
+  }
+
+  .header .logo span::before,
+  .header .logo:not(:has(span))::after {
+    font-size: 13px;
+    letter-spacing: 0.04em;
   }
 }
 
@@ -376,11 +494,27 @@ section {
 
 @media (max-width: 991px) {
   .mobile-nav-toggle {
-    display: block;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    position: relative;
+    z-index: 10000;
+    -webkit-tap-highlight-color: transparent;
   }
 
-  .navbar ul {
-    display: none;
+  .header .navbar {
+    position: static;
+    margin-left: auto;
+  }
+
+  .navbar:not(.navbar-mobile) > ul {
+    display: none !important;
   }
 }
 
@@ -391,18 +525,24 @@ section {
   right: 0;
   left: 0;
   bottom: 0;
+  z-index: 9999;
   background: rgba(1, 22, 61, 0.9);
   transition: 0.3s;
 }
 
 .navbar-mobile .mobile-nav-toggle {
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: 15px;
+  z-index: 10001;
+}
+
+body.mobile-nav-active {
+  overflow: hidden;
 }
 
 .navbar-mobile ul {
-  display: block;
+  display: block !important;
   position: absolute;
   top: 55px;
   right: 15px;
@@ -472,26 +612,39 @@ section {
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  padding: 110px 0 60px;
   background: url(../img/bg-abstract.webp) top center no-repeat;
   background-size: cover;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 700;
   color: #012970;
+  line-height: 1.2;
+  max-width: 18ch;
 }
 
 .hero h2 {
-  color: #444444;
-  margin: 15px 0 0 0;
-  font-size: 26px;
+  color: #334155;
+  margin: 18px 0 0;
+  font-size: 22px;
+  line-height: 1.6;
+  max-width: 36ch;
+}
+
+.hero .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
 }
 
 .hero .btn-get-started {
-  margin-top: 30px;
+  margin-top: 0;
   line-height: 0;
   padding: 15px 40px;
   border-radius: 4px;
@@ -518,6 +671,30 @@ section {
   transform: translateX(5px);
 }
 
+.hero .btn-whatsapp {
+  line-height: 0;
+  padding: 15px 28px;
+  border-radius: 4px;
+  transition: 0.3s;
+  color: #fff;
+  background: #25d366;
+  box-shadow: 0px 5px 24px rgba(37, 211, 102, 0.35);
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.hero .btn-whatsapp i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.hero .btn-whatsapp:hover {
+  color: #fff;
+  background: #1ebe57;
+}
+
 .hero .hero-img {
   text-align: right;
 }
@@ -530,13 +707,13 @@ section {
 
 @media (max-width: 991px) {
   .hero {
-    height: auto;
-    padding: 120px 0 60px 0;
+    min-height: auto;
+    padding: 100px 0 60px;
   }
 
   .hero .hero-img {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 40px;
   }
 
   .hero .hero-img img {
@@ -547,14 +724,28 @@ section {
 @media (max-width: 768px) {
   .hero {
     text-align: center;
+    padding: 92px 0 48px;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 30px;
+    max-width: none;
+    margin: 0 auto;
   }
 
   .hero h2 {
-    font-size: 24px;
+    font-size: 18px;
+    max-width: none;
+    margin: 16px auto 0;
+  }
+
+  .hero .hero-actions {
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .hero .hero-img {
+    margin-top: 32px;
   }
 
   .hero .hero-img img {
@@ -2335,27 +2526,81 @@ section {
 }
 
 .footer .footer-top .footer-info .logo {
-  line-height: 0;
+  line-height: 1.1;
   margin-bottom: 15px;
   display: inline-flex;
   align-items: center;
+  gap: 12px;
+  text-decoration: none;
 }
 
 .footer .footer-top .footer-info .logo img {
-  width: auto;
-  height: 112px;
-  max-height: 112px;
+  content: url("/assets/img/logo-gch-icon.png");
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
   margin-right: 0;
 }
 
 .footer .footer-top .footer-info .logo span {
-  display: none;
-  font-size: 26px;
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
   font-weight: 800;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.08em;
   color: #012970;
   font-family: "Nunito", sans-serif;
-  line-height: 1;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.footer .footer-top .footer-info .logo span::before {
+  content: "Global Contact Hub";
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  color: #012970;
+}
+
+.footer .footer-top .footer-info .logo span::after {
+  content: "Connecting Business Across The World";
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #4154f1;
+}
+
+.footer .footer-top .footer-info .logo:not(:has(span))::after {
+  content: "Global Contact Hub";
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #012970;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .footer .footer-top .footer-info .logo img {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    max-width: 48px;
+    max-height: 48px;
+  }
+
+  .footer .footer-top .footer-info .logo span::before,
+  .footer .footer-top .footer-info .logo:not(:has(span))::after {
+    font-size: 18px;
+  }
+
+  .footer .footer-top .footer-info .logo span::after {
+    font-size: 9px;
+  }
 }
 
 .footer .footer-top .footer-info p {

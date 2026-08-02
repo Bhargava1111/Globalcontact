@@ -31,10 +31,14 @@
       },
       body: JSON.stringify(buildPayload(form)),
     }).then(function (response) {
-      if (!response.ok) {
-        throw new Error("Request failed");
-      }
-      return response.json();
+      return response.json().catch(function () {
+        return {};
+      }).then(function (payload) {
+        if (!response.ok) {
+          throw new Error(payload && payload.error ? payload.error : "Request failed");
+        }
+        return payload;
+      });
     });
   }
 
@@ -170,10 +174,11 @@
             }, 3000);
           }
         })
-        .catch(function () {
+        .catch(function (error) {
+          var reason = error && error.message ? " (" + error.message + ")" : "";
           setFeedback(
             form,
-            "Automatic sending is unavailable right now. Your email app is opening with the enquiry filled in.",
+            "Automatic sending is unavailable right now" + reason + ". Your email app is opening with the enquiry filled in.",
             true,
           );
           window.location.href = buildMailtoUrl(form);
