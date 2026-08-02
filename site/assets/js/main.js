@@ -116,9 +116,29 @@
    * Mobile nav toggle
    */
   const navbar = select('#navbar')
-  let mobileNavToggle = select('.mobile-nav-toggle')
+  const headerContainer = select('#header .container-fluid, #header .container-xl')
+  let mobileNavToggle = select('#header-nav-toggle') || select('.mobile-nav-toggle')
 
-  if (mobileNavToggle && mobileNavToggle.tagName === 'I') {
+  if (navbar && headerContainer) {
+    const sourceToggle = select('.mobile-nav-toggle')
+
+    if (!select('#header-nav-toggle')) {
+      const headerToggle = document.createElement('button')
+      headerToggle.type = 'button'
+      headerToggle.id = 'header-nav-toggle'
+      headerToggle.className = 'mobile-nav-toggle bi bi-list header-nav-toggle'
+      headerToggle.setAttribute('aria-label', 'Open navigation menu')
+      headerToggle.setAttribute('aria-expanded', 'false')
+      headerContainer.appendChild(headerToggle)
+      mobileNavToggle = headerToggle
+
+      if (sourceToggle && sourceToggle !== headerToggle) {
+        sourceToggle.remove()
+      }
+    } else {
+      mobileNavToggle = select('#header-nav-toggle')
+    }
+  } else if (mobileNavToggle && mobileNavToggle.tagName === 'I') {
     const toggleButton = document.createElement('button')
     toggleButton.type = 'button'
     toggleButton.className = mobileNavToggle.className
@@ -127,14 +147,22 @@
     mobileNavToggle = toggleButton
   }
 
+  const setMobileNavIcon = (isOpen) => {
+    if (!mobileNavToggle) {
+      return
+    }
+
+    mobileNavToggle.classList.remove('bi-list', 'bi-x')
+    mobileNavToggle.classList.add(isOpen ? 'bi-x' : 'bi-list')
+  }
+
   const setMobileNavState = (isOpen) => {
     if (!navbar || !mobileNavToggle) {
       return
     }
 
     navbar.classList.toggle('navbar-mobile', isOpen)
-    mobileNavToggle.classList.toggle('bi-list', !isOpen)
-    mobileNavToggle.classList.toggle('bi-x', isOpen)
+    setMobileNavIcon(isOpen)
     mobileNavToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
     mobileNavToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu')
     document.body.classList.toggle('mobile-nav-active', isOpen)
@@ -149,19 +177,15 @@
   }
 
   const handleMobileNavToggle = (e) => {
-    e.preventDefault()
-    e.stopPropagation()
+    if (e) {
+      e.preventDefault()
+      e.stopPropagation()
+    }
     toggleMobileNav()
   }
 
   if (mobileNavToggle && navbar) {
-    mobileNavToggle.setAttribute('role', 'button')
-    mobileNavToggle.setAttribute('aria-label', 'Open navigation menu')
-    mobileNavToggle.setAttribute('aria-expanded', 'false')
-    mobileNavToggle.setAttribute('tabindex', '0')
-
     mobileNavToggle.addEventListener('click', handleMobileNavToggle)
-
     mobileNavToggle.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') {
         handleMobileNavToggle(e)
