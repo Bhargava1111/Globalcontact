@@ -117,35 +117,39 @@
    */
   const navbar = select('#navbar')
   const headerContainer = select('#header .container-fluid, #header .container-xl')
-  let mobileNavToggle = select('#header-nav-toggle') || select('.mobile-nav-toggle')
+  const desktopMenu = navbar ? navbar.querySelector(':scope > ul') : null
+  let mobileNavToggle = select('#header-nav-toggle')
+  let mobileNavOverlay = select('#mobile-nav-overlay')
+  let mobileNavPanel = select('#mobile-nav-panel')
+  let mobileMenuList = null
 
-  if (navbar && headerContainer) {
-    const sourceToggle = select('.mobile-nav-toggle')
-
-    if (!select('#header-nav-toggle')) {
-      const headerToggle = document.createElement('button')
-      headerToggle.type = 'button'
-      headerToggle.id = 'header-nav-toggle'
-      headerToggle.className = 'mobile-nav-toggle bi bi-list header-nav-toggle'
-      headerToggle.setAttribute('aria-label', 'Open navigation menu')
-      headerToggle.setAttribute('aria-expanded', 'false')
-      headerContainer.appendChild(headerToggle)
-      mobileNavToggle = headerToggle
-
-      if (sourceToggle && sourceToggle !== headerToggle) {
-        sourceToggle.remove()
-      }
-    } else {
-      mobileNavToggle = select('#header-nav-toggle')
+  if (navbar && headerContainer && desktopMenu) {
+    if (!mobileNavToggle) {
+      mobileNavToggle = document.createElement('button')
+      mobileNavToggle.type = 'button'
+      mobileNavToggle.id = 'header-nav-toggle'
+      mobileNavToggle.className = 'mobile-nav-toggle bi bi-list header-nav-toggle'
+      mobileNavToggle.setAttribute('aria-label', 'Open navigation menu')
+      mobileNavToggle.setAttribute('aria-expanded', 'false')
+      document.body.appendChild(mobileNavToggle)
+      select('#navbar .mobile-nav-toggle')?.remove()
     }
-  } else if (mobileNavToggle && mobileNavToggle.tagName === 'I') {
-    const toggleButton = document.createElement('button')
-    toggleButton.type = 'button'
-    toggleButton.className = mobileNavToggle.className
-    toggleButton.setAttribute('aria-label', 'Open navigation menu')
-    mobileNavToggle.replaceWith(toggleButton)
-    mobileNavToggle = toggleButton
+
+    if (!mobileNavOverlay) {
+      mobileNavOverlay = document.createElement('div')
+      mobileNavOverlay.id = 'mobile-nav-overlay'
+      mobileNavOverlay.className = 'mobile-nav-overlay'
+      mobileNavOverlay.innerHTML = '<div class="mobile-nav-panel" id="mobile-nav-panel"></div>'
+      document.body.appendChild(mobileNavOverlay)
+      mobileNavPanel = mobileNavOverlay.querySelector('#mobile-nav-panel')
+    }
+
+    mobileMenuList = desktopMenu.cloneNode(true)
+    mobileMenuList.removeAttribute('id')
+    mobileNavPanel.appendChild(mobileMenuList)
   }
+
+  const isMobileViewport = () => window.innerWidth <= 991
 
   const setMobileNavIcon = (isOpen) => {
     if (!mobileNavToggle) {
@@ -157,11 +161,11 @@
   }
 
   const setMobileNavState = (isOpen) => {
-    if (!navbar || !mobileNavToggle) {
+    if (!mobileNavToggle || !mobileNavOverlay) {
       return
     }
 
-    navbar.classList.toggle('navbar-mobile', isOpen)
+    mobileNavOverlay.classList.toggle('is-open', isOpen)
     setMobileNavIcon(isOpen)
     mobileNavToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false')
     mobileNavToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu')
@@ -169,11 +173,11 @@
   }
 
   const toggleMobileNav = () => {
-    if (!navbar) {
+    if (!mobileNavOverlay) {
       return
     }
 
-    setMobileNavState(!navbar.classList.contains('navbar-mobile'))
+    setMobileNavState(!mobileNavOverlay.classList.contains('is-open'))
   }
 
   const handleMobileNavToggle = (e) => {
@@ -184,54 +188,45 @@
     toggleMobileNav()
   }
 
-  if (mobileNavToggle && navbar) {
+  if (mobileNavToggle && mobileNavOverlay && mobileMenuList) {
     mobileNavToggle.addEventListener('click', handleMobileNavToggle)
+
     mobileNavToggle.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') {
         handleMobileNavToggle(e)
       }
     })
+
+    mobileNavOverlay.addEventListener('click', function(e) {
+      if (e.target === mobileNavOverlay) {
+        setMobileNavState(false)
+      }
+    })
+
+    mobileMenuList.addEventListener('click', function(e) {
+      const dropdownLink = e.target.closest('.dropdown > a')
+      if (dropdownLink && mobileMenuList.contains(dropdownLink)) {
+        e.preventDefault()
+        const submenu = dropdownLink.nextElementSibling
+        if (submenu) {
+          submenu.classList.toggle('dropdown-active')
+        }
+        return
+      }
+
+      const link = e.target.closest('a[href]')
+      if (!link || !mobileMenuList.contains(link)) {
+        return
+      }
+
+      setMobileNavState(false)
+    })
   }
 
   setMobileNavState(false)
 
-  /**
-   * Mobile nav dropdowns activate
-   */
-  on('click', '.navbar .dropdown > a', function(e) {
-    if (navbar && navbar.classList.contains('navbar-mobile')) {
-      e.preventDefault()
-      if (this.nextElementSibling) {
-        this.nextElementSibling.classList.toggle('dropdown-active')
-      }
-    }
-  }, true)
-
-  on('click', '.navbar-mobile a[href]', function() {
-    if (!navbar || !navbar.classList.contains('navbar-mobile')) {
-      return
-    }
-
-    const parentItem = this.closest('li')
-    if (parentItem && parentItem.classList.contains('dropdown') && this === parentItem.querySelector(':scope > a')) {
-      return
-    }
-
-    setMobileNavState(false)
-  }, true)
-
-  navbar?.addEventListener('click', function(e) {
-    if (!navbar.classList.contains('navbar-mobile')) {
-      return
-    }
-
-    if (e.target === navbar) {
-      setMobileNavState(false)
-    }
-  })
-
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 991 && navbar && navbar.classList.contains('navbar-mobile')) {
+    if (!isMobileViewport()) {
       setMobileNavState(false)
     }
   })
@@ -243,7 +238,7 @@
     if (select(this.hash)) {
       e.preventDefault()
 
-      if (navbar && navbar.classList.contains('navbar-mobile')) {
+      if (navbar && mobileNavOverlay && mobileNavOverlay.classList.contains('is-open')) {
         setMobileNavState(false)
       }
       scrollto(this.hash)
@@ -443,6 +438,10 @@ document.addEventListener("contextmenu", function (e){
 $(function() {
   const slider = $('.slider');
   const testimonials = $('.testimonial');
+  if (!slider.length || !testimonials.length) {
+    return;
+  }
+
   const prevButton = $('.prev-button');
   const nextButton = $('.next-button');
   const testimonialWidth = testimonials.first().outerWidth(true);
