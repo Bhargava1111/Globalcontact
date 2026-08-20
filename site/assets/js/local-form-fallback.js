@@ -176,12 +176,29 @@
             }, 3000);
           }
         })
-        .catch(function () {
-          setFeedback(
-            form,
-            "We could not send your message right now. Please email info@globalcontacthub.com and we will help you shortly.",
-            true,
-          );
+        .catch(function (error) {
+          var reason = error && error.message ? String(error.message) : "";
+          var needsSmtpSetup =
+            reason.toLowerCase().indexOf("smtp") !== -1 ||
+            reason.toLowerCase().indexOf("password") !== -1;
+
+          if (needsSmtpSetup) {
+            setFeedback(
+              form,
+              "Email server is not configured on the live site yet. Opening your email app so you can send this enquiry now.",
+              true,
+            );
+          } else {
+            setFeedback(
+              form,
+              "We could not send your message automatically. Opening your email app with the enquiry filled in.",
+              true,
+            );
+          }
+
+          window.setTimeout(function () {
+            window.location.href = buildMailtoUrl(form);
+          }, 700);
         });
     },
     true,
