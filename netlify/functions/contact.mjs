@@ -124,8 +124,8 @@ export async function handler(event) {
     },
   });
 
-  const replyToField = payloadFields.find((field) => field.key.toLowerCase() === "Email");
-  const subjectField = payloadFields.find((field) => field.key.toLowerCase() === "Subject");
+  const replyToField = payloadFields.find((field) => field.key.toLowerCase() === "email");
+  const subjectField = payloadFields.find((field) => field.key.toLowerCase() === "subject");
   const emailContent = buildEmailContent(payloadFields, pageTitle, pageUrl);
 
   try {
