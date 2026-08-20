@@ -88,9 +88,11 @@
     }
 
     var action = (form.getAttribute("action") || "").toLowerCase();
+
     return (
       form.classList.contains("contact-form") ||
       form.classList.contains("php-email-form") ||
+      form.closest(".footer-newsletter") ||
       action.indexOf("send_email.php") !== -1 ||
       action.indexOf("forms/contact.php") !== -1 ||
       action === "#local-form-handler"
@@ -158,7 +160,7 @@
         .then(function () {
           setFeedback(
             form,
-            "Your enquiry was sent successfully to info@globalcontacthub.com and robert.h@globalcontacthub.com.",
+            "Thank you. Your message was sent successfully. Our team will contact you shortly.",
             false,
           );
 
@@ -174,14 +176,12 @@
             }, 3000);
           }
         })
-        .catch(function (error) {
-          var reason = error && error.message ? " (" + error.message + ")" : "";
+        .catch(function () {
           setFeedback(
             form,
-            "Automatic sending is unavailable right now" + reason + ". Your email app is opening with the enquiry filled in.",
+            "We could not send your message right now. Please email info@globalcontacthub.com and we will help you shortly.",
             true,
           );
-          window.location.href = buildMailtoUrl(form);
         });
     },
     true,

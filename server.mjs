@@ -103,6 +103,19 @@ function buildEmailContent(payloadFields, pageTitle, pageUrl) {
   };
 }
 
+const submissionsFile = path.join(__dirname, "data", "contact-submissions.jsonl");
+
+async function saveSubmissionFallback(pageTitle, pageUrl, payloadFields) {
+  await fs.mkdir(path.dirname(submissionsFile), { recursive: true });
+  const entry = {
+    receivedAt: new Date().toISOString(),
+    pageTitle,
+    pageUrl,
+    fields: Object.fromEntries(payloadFields.map((field) => [field.key, field.value])),
+  };
+  await fs.appendFile(submissionsFile, `${JSON.stringify(entry)}\n`, "utf8");
+}
+
 app.post("/api/contact", async (req, res) => {
   const pageTitle = String(req.body.pageTitle || `${siteName} enquiry`).trim();
   const pageUrl = String(req.body.pageUrl || "").trim();
@@ -113,14 +126,21 @@ app.post("/api/contact", async (req, res) => {
     return;
   }
 
-  if (!process.env.SMTP_PASS) {
-    res.status(500).json({ ok: false, error: "SMTP password is not configured." });
-    return;
-  }
-
-  const replyToField = payloadFields.find((field) => field.key.toLowerCase() === "Email");
-  const subjectField = payloadFields.find((field) => field.key.toLowerCase() === "Subject");
+  const replyToField = payloadFields.find((field) => field.key.toLowerCase() === "email");
+  const subjectField = payloadFields.find((field) => field.key.toLowerCase() === "subject");
   const emailContent = buildEmailContent(payloadFields, pageTitle, pageUrl);
+
+  if (!process.env.SMTP_PASS) {
+    try {
+      await saveSubmissionFallback(pageTitle, pageUrl, payloadFields);
+      res.json({ ok: true, stored: true });
+      return;
+    } catch (error) {
+      console.error("Failed to store contact form submission:", error);
+      res.status(500).json({ ok: false, error: "Unable to save your enquiry right now." });
+      return;
+    }
+  }
 
   try {
     await transporter.sendMail({
@@ -135,7 +155,14 @@ app.post("/api/contact", async (req, res) => {
     res.json({ ok: true });
   } catch (error) {
     console.error("Failed to send contact form email:", error);
-    res.status(500).json({ ok: false, error: "Failed to send email." });
+
+    try {
+      await saveSubmissionFallback(pageTitle, pageUrl, payloadFields);
+      res.json({ ok: true, stored: true });
+    } catch (storeError) {
+      console.error("Failed to store contact form submission after SMTP error:", storeError);
+      res.status(500).json({ ok: false, error: "Failed to send email." });
+    }
   }
 });
 

@@ -149,7 +149,7 @@
     mobileNavPanel.appendChild(mobileMenuList)
   }
 
-  const isMobileViewport = () => window.innerWidth <= 991
+  const isMobileViewport = () => window.innerWidth <= 1199
 
   const setMobileNavIcon = (isOpen) => {
     if (!mobileNavToggle) {
