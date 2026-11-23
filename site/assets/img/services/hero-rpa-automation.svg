@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <defs>
+    <linearGradient id="grpa1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4154f1"/>
+      <stop offset="100%" stop-color="#47b2e4"/>
+    </linearGradient>
+    <filter id="shrpa">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#4154f1" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <circle cx="250" cy="200" r="160" fill="url(#grpa1)" opacity="0.08"/>
+  <g transform="translate(60, 50)" filter="url(#shrpa)">
+    <rect width="380" height="280" rx="20" fill="#ffffff" stroke="#e1ecff" stroke-width="2"/>
+    <rect width="380" height="48" rx="20" fill="#012970"/>
+    <text x="25" y="30" font-family="'Nunito', sans-serif" font-size="15" font-weight="bold" fill="#ffffff">RPA Automated Bots Orchestration</text>
+    
+    <!-- Flow diagram -->
+    <g transform="translate(30, 80)">
+      <!-- Step 1: Inbound Doc -->
+      <rect width="80" height="70" rx="10" fill="#f6f9fc" stroke="#e1ecff"/>
+      <rect x="15" y="15" width="50" height="6" rx="3" fill="#012970"/>
+      <rect x="15" y="27" width="35" height="5" rx="2.5" fill="#47b2e4"/>
+      <rect x="15" y="45" width="50" height="14" rx="4" fill="#e1ecff"/>
+      <text x="40" y="55" text-anchor="middle" font-size="8" font-weight="bold" fill="#4154f1">Inbound PDF</text>
+
+      <!-- Arrow 1 -->
+      <path d="M85 35 L115 35" stroke="#4154f1" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="112,30 120,35 112,40" fill="#4154f1"/>
+
+      <!-- Step 2: Bot Processing -->
+      <g transform="translate(125, 0)">
+        <rect width="90" height="70" rx="10" fill="url(#grpa1)"/>
+        <circle cx="45" cy="25" r="12" fill="#fff" opacity="0.2"/>
+        <text x="45" y="30" text-anchor="middle" font-size="14" fill="#fff">🤖</text>
+        <text x="45" y="55" text-anchor="middle" font-size="9" font-weight="bold" fill="#fff">OCR &amp; Parse</text>
+      </g>
+
+      <!-- Arrow 2 -->
+      <path d="M220 35 L250 35" stroke="#4154f1" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="247,30 255,35 247,40" fill="#4154f1"/>
+
+      <!-- Step 3: Database & ERP -->
+      <g transform="translate(260, 0)">
+        <rect width="80" height="70" rx="10" fill="#f0fff4" stroke="#c6f6d5"/>
+        <circle cx="40" cy="25" r="12" fill="#38a169"/>
+        <path d="M35 25 L38 28 L46 22" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        <text x="40" y="55" text-anchor="middle" font-size="8" font-weight="bold" fill="#22543d">Synced to ERP</text>
+      </g>
+    </g>
+
+    <!-- Bot Execution Logs -->
+    <rect x="30" y="175" width="320" height="85" rx="10" fill="#f6f9fc" stroke="#e1ecff"/>
+    <text x="45" y="196" font-size="10" font-weight="bold" fill="#38a169">● [10:42:01] BOT-01: Extracted 240 invoices with 100% accuracy</text>
+    <text x="45" y="216" font-size="10" font-weight="bold" fill="#4154f1">● [10:42:15] BOT-02: Auto-reconciled bank feed transactions</text>
+    <text x="45" y="236" font-size="10" font-weight="bold" fill="#47b2e4">● [10:42:28] BOT-03: Dispatched compliance summary report</text>
+  </g>
+</svg>

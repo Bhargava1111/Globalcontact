@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <defs>
+    <linearGradient id="gec1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4154f1"/>
+      <stop offset="100%" stop-color="#47b2e4"/>
+    </linearGradient>
+    <filter id="shec">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#4154f1" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <circle cx="250" cy="200" r="160" fill="url(#gec1)" opacity="0.08"/>
+  
+  <!-- Main Storefront Card -->
+  <g transform="translate(70, 50)" filter="url(#shec)">
+    <rect width="360" height="280" rx="20" fill="#ffffff" stroke="#e1ecff" stroke-width="2"/>
+    <!-- Browser header -->
+    <rect width="360" height="40" rx="20" fill="#f6f9fc"/>
+    <circle cx="25" cy="20" r="5" fill="#ff5f56"/>
+    <circle cx="42" cy="20" r="5" fill="#ffbd2e"/>
+    <circle cx="59" cy="20" r="5" fill="#27c93f"/>
+    <rect x="85" y="10" width="190" height="20" rx="6" fill="#e1ecff"/>
+    
+    <!-- Product Grid inside -->
+    <!-- Product 1 -->
+    <rect x="25" y="60" width="95" height="110" rx="10" fill="#f6f9fc" stroke="#e1ecff"/>
+    <rect x="35" y="70" width="75" height="50" rx="6" fill="url(#gec1)" opacity="0.2"/>
+    <rect x="35" y="130" width="50" height="8" rx="4" fill="#012970"/>
+    <rect x="35" y="145" width="30" height="8" rx="4" fill="#47b2e4"/>
+
+    <!-- Product 2 -->
+    <rect x="132" y="60" width="95" height="110" rx="10" fill="#f6f9fc" stroke="#e1ecff"/>
+    <rect x="142" y="70" width="75" height="50" rx="6" fill="url(#gec1)" opacity="0.3"/>
+    <rect x="142" y="130" width="50" height="8" rx="4" fill="#012970"/>
+    <rect x="142" y="145" width="30" height="8" rx="4" fill="#47b2e4"/>
+
+    <!-- Product 3 -->
+    <rect x="240" y="60" width="95" height="110" rx="10" fill="#f6f9fc" stroke="#e1ecff"/>
+    <rect x="250" y="70" width="75" height="50" rx="6" fill="url(#gec1)" opacity="0.25"/>
+    <rect x="250" y="130" width="50" height="8" rx="4" fill="#012970"/>
+    <rect x="250" y="145" width="30" height="8" rx="4" fill="#47b2e4"/>
+
+    <!-- Checkout bar -->
+    <rect x="25" y="195" width="310" height="60" rx="12" fill="#f0fff4" stroke="#c6f6d5"/>
+    <circle cx="55" cy="225" r="16" fill="#38a169"/>
+    <path d="M49 225 L53 229 L61 221" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="82" y="222" font-family="'Nunito', sans-serif" font-weight="bold" font-size="14" fill="#22543d">Seamless Instant Checkout</text>
+    <text x="82" y="238" font-family="sans-serif" font-size="11" fill="#38a169">Stripe, PayPal, Apple Pay Integrated</text>
+  </g>
+
+  <!-- Floating Cart Badge -->
+  <g transform="translate(340, 20)" filter="url(#shec)">
+    <circle cx="35" cy="35" r="35" fill="url(#gec1)"/>
+    <path d="M22 25 L28 25 L34 44 L48 44 L53 31 L29 31" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="36" cy="48" r="3" fill="#fff"/>
+    <circle cx="46" cy="48" r="3" fill="#fff"/>
+  </g>
+</svg>

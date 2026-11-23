@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <defs>
+    <linearGradient id="gerp1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4154f1"/>
+      <stop offset="100%" stop-color="#47b2e4"/>
+    </linearGradient>
+    <filter id="sherp">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#4154f1" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <circle cx="250" cy="200" r="160" fill="url(#gerp1)" opacity="0.08"/>
+  <g transform="translate(60, 50)" filter="url(#sherp)">
+    <rect width="380" height="280" rx="20" fill="#ffffff" stroke="#e1ecff" stroke-width="2"/>
+    <!-- Top Bar -->
+    <rect width="380" height="48" rx="20" fill="#012970"/>
+    <text x="25" y="30" font-family="'Nunito', sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Enterprise ERP &amp; CRM Suite</text>
+    <circle cx="345" cy="24" r="12" fill="url(#gerp1)"/>
+    
+    <!-- ERP KPI Widgets -->
+    <rect x="25" y="68" width="100" height="55" rx="10" fill="#f6f9fc" stroke="#e1ecff"/>
+    <text x="35" y="88" font-size="9" font-weight="bold" fill="#47b2e4">TOTAL LEADS</text>
+    <text x="35" y="110" font-family="'Nunito', sans-serif" font-size="16" font-weight="bold" fill="#012970">18,420</text>
+
+    <rect x="140" y="68" width="100" height="55" rx="10" fill="#f6f9fc" stroke="#e1ecff"/>
+    <text x="150" y="88" font-size="9" font-weight="bold" fill="#4154f1">INVENTORY UNITS</text>
+    <text x="150" y="110" font-family="'Nunito', sans-serif" font-size="16" font-weight="bold" fill="#012970">452,190</text>
+
+    <rect x="255" y="68" width="100" height="55" rx="10" fill="#f6f9fc" stroke="#e1ecff"/>
+    <text x="265" y="88" font-size="9" font-weight="bold" fill="#27c93f">PROCESSED ORDERS</text>
+    <text x="265" y="110" font-family="'Nunito', sans-serif" font-size="16" font-weight="bold" fill="#012970">99.8%</text>
+
+    <!-- CRM Customer Table Simulation -->
+    <rect x="25" y="140" width="330" height="120" rx="12" fill="#ffffff" stroke="#e1ecff"/>
+    <!-- Table Header -->
+    <rect x="25" y="140" width="330" height="28" rx="12" fill="#f6f9fc"/>
+    <text x="40" y="158" font-size="10" font-weight="bold" fill="#012970">ACCOUNT</text>
+    <text x="140" y="158" font-size="10" font-weight="bold" fill="#012970">PIPELINE STAGE</text>
+    <text x="270" y="158" font-size="10" font-weight="bold" fill="#012970">VALUE</text>
+
+    <!-- Row 1 -->
+    <circle cx="45" cy="180" r="8" fill="#4154f1"/>
+    <text x="60" y="184" font-size="10" font-weight="bold" fill="#012970">Global Logistics</text>
+    <rect x="140" y="172" width="70" height="16" rx="8" fill="#f0fff4"/>
+    <text x="175" y="184" text-anchor="middle" font-size="9" font-weight="bold" fill="#22543d">Closed Won</text>
+    <text x="270" y="184" font-size="10" font-weight="bold" fill="#012970">$125,000</text>
+
+    <!-- Row 2 -->
+    <circle cx="45" cy="208" r="8" fill="#47b2e4"/>
+    <text x="60" y="212" font-size="10" font-weight="bold" fill="#012970">Apex Healthcare</text>
+    <rect x="140" y="200" width="70" height="16" rx="8" fill="#e1ecff"/>
+    <text x="175" y="212" text-anchor="middle" font-size="9" font-weight="bold" fill="#4154f1">Negotiation</text>
+    <text x="270" y="212" font-size="10" font-weight="bold" fill="#012970">$84,500</text>
+
+    <!-- Row 3 -->
+    <circle cx="45" cy="236" r="8" fill="#012970"/>
+    <text x="60" y="240" font-size="10" font-weight="bold" fill="#012970">Horizon Media</text>
+    <rect x="140" y="228" width="70" height="16" rx="8" fill="#fff5f5"/>
+    <text x="175" y="240" text-anchor="middle" font-size="9" font-weight="bold" fill="#c53030">Proposal</text>
+    <text x="270" y="240" font-size="10" font-weight="bold" fill="#012970">$42,000</text>
+  </g>
+</svg>

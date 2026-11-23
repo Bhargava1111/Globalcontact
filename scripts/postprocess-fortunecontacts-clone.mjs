@@ -4,14 +4,14 @@ import crypto from "node:crypto";
 
 const SITE_ROOT = path.resolve("site");
 const FALLBACK_SCRIPT = "assets/js/local-form-fallback.js";
-const PRIMARY_EMAIL = "info@globalcontacthub.com";
-const SECONDARY_EMAIL = "robert.h@globalcontacthub.com";
+const PRIMARY_EMAIL = "info@globalmarco.com";
+const SECONDARY_EMAIL = "info@globalmarco.com";
 const PRIMARY_PHONE_DISPLAY = "+1 661-451-2161";
 const PRIMARY_PHONE_HREF = "tel:+16614512161";
 const WHATSAPP_URL = "https://wa.me/918106768968";
 const SOCIAL_LINK_PLACEHOLDER = "#";
 const ANNIVERSARY_IMAGE = "assets/img/5-years-local.png";
-const LOGO_IMAGE = "assets/img/logo-gch-mark.svg";
+const LOGO_IMAGE = "assets/img/logo-globalmarco-icon.svg";
 const HERO_IMAGE = "assets/img/hero-main.webp";
 const DEFAULT_HEADERS = {
   "user-agent":
@@ -135,11 +135,11 @@ function rewriteKnownExternalStyles(html, htmlFile) {
 
 function rewriteBrandAssets(html) {
   let updated = html;
-  const assetPathPattern = /(["'])(?:\/assets\/img\/|(?:\.\.\/)?assets\/img\/)(logo\.webp|logo-global\.svg|logo-gch\.png|logo-gch-mark\.svg)\1/gi;
+  const assetPathPattern = /(["'])(?:\/assets\/img\/|(?:\.\.\/)?assets\/img\/)(logo-globalmarco-icon\.svg|logo-globalmarco-icon\.png)\1/gi;
 
   updated = updated.replace(assetPathPattern, `$1/${LOGO_IMAGE}$1`);
   updated = updated.replace(
-    /(["'])((?:\.\.\/)?assets\/img\/)Global Contact Hub\.webp\1/gi,
+    /(["'])((?:\.\.\/)?assets\/img\/)GlobalMarco\.webp\1/gi,
     '$1/assets/img/hero-main.webp$1',
   );
   updated = updated.replace(
@@ -158,20 +158,20 @@ function rewriteBrandingAndContacts(html) {
   let updated = html;
 
   updated = updated.replace(/david@fortunecontacts\.com/gi, SECONDARY_EMAIL);
-  updated = updated.replace(/david@globalcontacthub\.com/gi, SECONDARY_EMAIL);
+  updated = updated.replace(/david@globalmarco\.com/gi, SECONDARY_EMAIL);
   updated = updated.replace(/sales@fortunecontacts\.com/gi, PRIMARY_EMAIL);
-  updated = updated.replace(/sales@globalcontacthub\.com/gi, PRIMARY_EMAIL);
+  updated = updated.replace(/sales@globalmarco\.com/gi, PRIMARY_EMAIL);
   updated = updated.replace(/info@fortunecontacts\.com/gi, PRIMARY_EMAIL);
   updated = updated.replace(/[A-Z0-9._%+-]+@fortunecontacts\.com/gi, PRIMARY_EMAIL);
 
-  updated = updated.replace(/Fortune Contacts/g, "Global Contact Hub");
-  updated = updated.replace(/FORTUNE CONTACTS/g, "GLOBAL CONTACT HUB");
-  updated = updated.replace(/fortune contacts/g, "global contact hub");
-  updated = updated.replace(/Fortune Contact/g, "Global Contact Hub");
-  updated = updated.replace(/fortune contact/g, "global contact hub");
-  updated = updated.replace(/Fortunecontacts/g, "Global Contact Hub");
-  updated = updated.replace(/fortunecontacts/g, "global contact hub");
-  updated = updated.replace(/fortunecontacts\.com/gi, "globalcontacthub.com");
+  updated = updated.replace(/Fortune Contacts/g, "GlobalMarco");
+  updated = updated.replace(/FORTUNE CONTACTS/g, "GLOBALMARCO");
+  updated = updated.replace(/fortune contacts/g, "globalmarco");
+  updated = updated.replace(/Fortune Contact/g, "GlobalMarco");
+  updated = updated.replace(/fortune contact/g, "globalmarco");
+  updated = updated.replace(/Fortunecontacts/g, "GlobalMarco");
+  updated = updated.replace(/fortunecontacts/g, "globalmarco");
+  updated = updated.replace(/fortunecontacts\.com/gi, "globalmarco.com");
   updated = updated.replace(/https:\/\/twitter\.com\/fortunecontacts/gi, SOCIAL_LINK_PLACEHOLDER);
   updated = updated.replace(/https:\/\/www\.facebook\.com\/FortuneContacts\/?/gi, SOCIAL_LINK_PLACEHOLDER);
   updated = updated.replace(/https:\/\/www\.instagram\.com\/fortunecontacts\/?/gi, SOCIAL_LINK_PLACEHOLDER);

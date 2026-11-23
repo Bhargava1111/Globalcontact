@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" fill="none">
+  <defs>
+    <linearGradient id="gios1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4154f1"/>
+      <stop offset="100%" stop-color="#47b2e4"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="160" rx="20" fill="url(#gios1)" opacity="0.12"/>
+  <!-- Modern iPhone mockup -->
+  <rect x="62" y="16" width="76" height="128" rx="18" fill="#012970" stroke="#4154f1" stroke-width="2"/>
+  <rect x="68" y="24" width="64" height="112" rx="12" fill="#ffffff"/>
+  <!-- Dynamic Island -->
+  <rect x="88" y="28" width="24" height="6" rx="3" fill="#012970"/>
+  <!-- iOS App UI Cards -->
+  <rect x="74" y="42" width="52" height="24" rx="6" fill="url(#gios1)"/>
+  <circle cx="84" cy="54" r="5" fill="#ffffff" opacity="0.8"/>
+  <rect x="94" y="52" width="24" height="4" rx="2" fill="#ffffff"/>
+  <!-- Grid items -->
+  <rect x="74" y="72" width="24" height="24" rx="6" fill="#f6f9fc" stroke="#e1ecff"/>
+  <rect x="102" y="72" width="24" height="24" rx="6" fill="#f6f9fc" stroke="#e1ecff"/>
+  <rect x="74" y="102" width="52" height="24" rx="6" fill="#f6f9fc" stroke="#e1ecff"/>
+  <!-- Home indicator line -->
+  <rect x="88" y="130" width="24" height="2" rx="1" fill="#012970" opacity="0.4"/>
+</svg>

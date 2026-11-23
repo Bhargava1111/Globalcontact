@@ -1,9 +1,9 @@
 import nodemailer from "nodemailer";
 
-const siteName = process.env.SITE_NAME || "Global Contact Hub";
-const senderEmail = process.env.SMTP_USER || "info@globalcontacthub.com";
+const siteName = process.env.SITE_NAME || "GlobalMarco";
+const senderEmail = process.env.SMTP_USER || "info@globalmarco.com";
 const recipients = (process.env.CONTACT_RECIPIENTS ||
-  "info@globalcontacthub.com,robert.h@globalcontacthub.com")
+  "info@globalmarco.com")
   .split(",")
   .map((value) => value.trim())
   .filter(Boolean);

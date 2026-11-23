@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Get the Most Accurate Data | Global Contact Hub</title>
+  <title>Get the Most Accurate Data | GlobalMarco</title>
   <meta name="description"
     content="We provide all category database to Improve your sales efficiency and productivity with our accurate and customized data. ">
   <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
@@ -16,24 +16,24 @@
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="index.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Get the Most Accurate Data | Global Contact Hub">
+  <meta property="og:title" content="Get the Most Accurate Data | GlobalMarco">
   <meta property="og:description" content="We provide all category database to Improve your sales efficiency and productivity with our accurate and customized data. ">
   <meta property="og:image" content="../_external/ik.imagekit.io/0qcfqf9sw/fortune images/about-9fe0171424.webp">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="globalcontacthub.com">
+  <meta property="twitter:domain" content="globalmarco.com">
   <meta property="twitter:url" content="index.html">
-  <meta name="twitter:title" content="Get the Most Accurate Data | Global Contact Hub">
+  <meta name="twitter:title" content="Get the Most Accurate Data | GlobalMarco">
   <meta name="twitter:description" content="We provide all category database to Improve your sales efficiency and productivity with our accurate and customized data. ">
   <meta name="twitter:image" content="../_external/ik.imagekit.io/0qcfqf9sw/fortune images/about-9fe0171424.webp">
 
 
   <!-- Favicons -->
-  <link href="/assets/img/favicon.ico?v=2" rel="icon" sizes="any">
-  <link href="/assets/img/favicon-32.png?v=2" rel="icon" type="image/png" sizes="32x32">
-  <link href="/assets/img/favicon-16.png?v=2" rel="icon" type="image/png" sizes="16x16">
-  <link href="/assets/img/apple-touch-icon.png?v=2" rel="apple-touch-icon" sizes="180x180">
+  <link href="/assets/img/favicon.ico?v=3" rel="icon" sizes="any">
+  <link href="/assets/img/favicon-32.png?v=3" rel="icon" type="image/png" sizes="32x32">
+  <link href="/assets/img/favicon-16.png?v=3" rel="icon" type="image/png" sizes="16x16">
+  <link href="/assets/img/apple-touch-icon.png?v=3" rel="apple-touch-icon" sizes="180x180">
 <!-- Google Fonts -->
   <link href="../assets/css/googleFonts.css" rel="stylesheet">
 
@@ -47,137 +47,151 @@
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/gm-landing.css" rel="stylesheet">
 
 </head>
 
 <body>
-  <div class="overlay" id="enquiryPopup">
-    <div class="popup-content">
-        <button class="close-button" id="closeButton" >&times;</button>
-        <h2>Quick Enquiry</h2>
-        <p>Got a question? Contact us Quickly and easily using the following form and we will get back to you ASAP!</p>
-         <form action="#local-form-handler" method="post" id="contactForm" class="contact-form">
-            <label for="phone">Phone Number:</label>
-            <input type="text" name="phone" id="phone-number" required>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email-id" required>
-            <label for="message">Message:</label>
-            <textarea id="message-text1" name="message" required></textarea>
-            <button class="blue" type="submit">Submit</button>
-        </form>
-        <div id="successPopup" style="display: none;">
-              <p>Message sent successfully!</p>
-          </div>
-          <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            var form = event.target;
-            var formData = new FormData(form);
-
-            var xhr = new XMLHttpRequest();
-            console.info("Local clone form submission intercepted.");
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4) {
-                    if (xhr.status === 200) {
-                        document.getElementById("successPopup").style.display = "block";
-                        form.reset(); // Clear the form after successful submission
-                        setTimeout(function() {
-                            document.getElementById("successPopup").style.display = "none";
-                        }, 3000); // Hide the success message after 3 seconds (3000 milliseconds)
-                    } else {
-                        alert("Failed to send the message. Please try again later.");
-                    }
-                }
-            };
-            xhr.send(formData);
-        });
-    </script>
-    </div>
-  </div>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="../index.html" class="logo d-flex align-items-center">
-        <img src="/assets/img/logo-gch-mark.svg" alt="Global Contact Hub">
-        <span>Global Contact Hub</span>
+        <img src="/assets/img/logo-globalmarco-icon.svg" alt="GlobalMarco">
+        <span>GlobalMarco</span>
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="../index.html">Home</a></li>
-          <li><a class="nav-link scrollto active" href="index.html">About Us</a></li>
-          <li class="dropdown"><a ><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="../About-Us/index.html">About Us</a></li>
+              <li class="dropdown"><a ><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="../Automotive-Industry-List/index.html"><span>Automotive Industry List</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="../Automobile-Industry-Email-List/index.html">Automobile Industry Email List</a></li>
+                      <li><a href="../Automotive-Email-List/index.html">Automotive Email List</a></li>
+                      <li><a href="../Auto-Dealers-Email-List/index.html">Auto Dealers Email List</a></li>
+                      <li><a href="../New-Car-Dealer-Email-List/index.html">New Car Dealers Email List</a></li>
+                      <li><a href="../Used-Car-Dealers-Email-List/index.html">Used Car Dealers Email List</a></li>
+                      <li><a href="../automotive-more-industries/index.html">&amp; Many more</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="nav-link scrollto" href="../Aviation-Industry/index.html">Aviation Industry</a></li>
+                  <li class="dropdown"><a href="../Chemical-Industry/index.html"><span>Chemical Industry</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="../Chemicals-Email-List/index.html">Chemicals Email List</a></li>
+                      <li><a href="../Equipments-Manufactures-Email-List/index.html">Equipments Manufactures Email List</a></li>
+                      <li><a href="../Laboratories-Email-List/index.html">Laboratories Email List</a></li>
+                      <li><a href="../Pharmaceuticals-Email-List/index.html">Pharmaceuticals Email List</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="../Education-Sector/index.html"><span>Education Sector</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="../Charter-Schools-Email-List/index.html">Charter Schools Email List</a></li>
+                      <li><a href="../Colleges-and-Universities-Email-List/index.html">Colleges and Universities Email List</a></li>
+                      <li><a href="../K-12-Schools-Email-List/index.html">K-12 Schools Email List</a></li>
+                      <li><a href="../Principals-Email-List/index.html">Principals Email List</a></li>
+                      <li><a href="../Schools-Districts-Email-List/index.html">Schools Districts Email List</a></li>
+                      <li><a href="../Schools-Email-List/index.html">Schools Email List</a></li>
+                      <li><a href="../Teachers-Email-List/index.html">Teachers Email List</a></li>
+ 		              <li><a href="../education-sector-more-industries-list/index.html">&amp; Many more</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="../Finance-Industry/index.html"><span>Finance Industry</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="../Banking-Email-List/index.html">Banking Email List</a></li>
+                      <li><a href="../Credit-Unions-Email-List/index.html">Credit Unions Email List</a></li>
+                      <li><a href="../Finance-Industry-Email-List/index.html">Finance Industry Email List</a></li>
+                      <li><a href="../Insurance-Agents-List/index.html">Insurance Agents List</a></li>
+                      <li><a href="../Mortgage-Loan-Brokers-Email-List/index.html">Mortgage Loan Brokers Email List</a></li>
+                      <li><a href="../finance-more-industries/index.html">&amp; Many more</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="../Healthcare-Industry/index.html"><span>Healthcare Industry</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="../Clinics-Email-List/index.html">Clinics Email List</a></li>
+                      <li><a href="../Dentists-Email-List/index.html">Dentists Email List</a></li>
+                      <li><a href="../Hospitals-Email-List/index.html">Hospitals Email List</a></li>
+                      <li><a href="../Medical-Equipment-Dealers-List/index.html">Medical Equipment Dealers List</a></li>
+                      <li><a href="../Nurses-Email-List/index.html">Nurses Email List</a></li>
+                      <li><a href="../Pharmaceutical-Email-List/index.html">Pharmaceutical Email List</a></li>
+                      <li><a href="../Physicians-and-Surgeons-Email-List/index.html">Physicians and Surgeons Email List</a></li>
+                      <li><a href="../healthcare-more-industries/index.html">&amp; Many more</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="../IT-Emailing-List/index.html">IT Emailing List</a></li>
+                  <li><a href="../Oil-and-Gas-Industry-List/index.html">Oil and Gas Industry List</a></li>
+                  <li><a href="../Real-Estate-Mailing-List/index.html">Real Estate Mailing List</a></li>
+                  <li><a href="../property-management-email-list/index.html">Property Management Email List</a></li>
+</ul>
+              </li>
+          <li class="dropdown"><a><span>Web Design</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li class="dropdown"><a href="../Automotive-Industry-List/index.html"><span>Automotive Industry List</span> <i
-                    class="bi bi-chevron-right"></i></a>
+              <li><a href="../services/index.html">Services Overview</a></li>
+              <li class="dropdown"><a href="../services/web-development/index.html"><span>Web Development Services</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="../Automobile-Industry-Email-List/index.html">Automobile Industry Email List</a></li>
-                  <li><a href="../Automotive-Email-List/index.html">Automotive Email List</a></li>
-                  <li><a href="../Auto-Dealers-Email-List/index.html">Auto Dealers Email List</a></li>
-                  <li><a href="../New-Car-Dealer-Email-List/index.html">New Car Dealers Email List</a></li>
-                  <li><a href="../Used-Car-Dealers-Email-List/index.html">Used Car Dealers Email List</a></li>
-                  <li><a href="../automotive-more-industries/index.html">&amp; Many more</a></li>
+                  <li><a href="../services/web-development/custom-web-development/index.html">Custom Web Development</a></li>
+                  <li><a href="../services/web-development/full-stack-web-development/index.html">Full-Stack Web Development</a></li>
+                  <li><a href="../services/web-development/e-commerce-development/index.html">E-commerce Development</a></li>
+                  <li><a href="../services/web-development/cms-development/index.html">CMS Development</a></li>
+                  <li><a href="../services/web-development/saas-web-application-development/index.html">SaaS Web Application Development</a></li>
+                  <li><a href="../services/web-development/progressive-web-app-development/index.html">Progressive Web App (PWA) Development</a></li>
                 </ul>
               </li>
-              <li><a class="nav-link scrollto" href="../Aviation-Industry/index.html">Aviation Industry</a></li>
-              <li class="dropdown"><a href="../Chemical-Industry/index.html"><span>Chemical Industry</span> <i
-                    class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="../services/mobile-app-development/index.html"><span>Mobile App Development Services</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="../Chemicals-Email-List/index.html">Chemicals Email List</a></li>
-                  <li><a href="../Equipments-Manufactures-Email-List/index.html">Equipments Manufactures Email List</a></li>
-                  <li><a href="../Laboratories-Email-List/index.html">Laboratories Email List</a></li>
-                  <li><a href="../Pharmaceuticals-Email-List/index.html">Pharmaceuticals Email List</a></li>
+                  <li><a href="../services/mobile-app-development/android-app-development/index.html">Android App Development</a></li>
+                  <li><a href="../services/mobile-app-development/ios-app-development/index.html">iOS App Development</a></li>
+                  <li><a href="../services/mobile-app-development/flutter-app-development/index.html">Flutter App Development</a></li>
+                  <li><a href="../services/mobile-app-development/react-native-app-development/index.html">React Native App Development</a></li>
+                  <li><a href="../services/mobile-app-development/cross-platform-app-development/index.html">Cross-Platform App Development</a></li>
+                  <li><a href="../services/mobile-app-development/enterprise-mobile-app-development/index.html">Enterprise Mobile App Development</a></li>
                 </ul>
               </li>
-              <li class="dropdown"><a href="../Education-Sector/index.html"><span>Education Sector</span> <i
-                    class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="../services/ai-development-automation/index.html"><span>AI Development &amp; Automation Services</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="../Charter-Schools-Email-List/index.html">Charter Schools Email List</a></li>
-                  <li><a href="../Colleges-and-Universities-Email-List/index.html">Colleges and Universities Email List</a></li>
-                  <li><a href="../K-12-Schools-Email-List/index.html">K-12 Schools Email List</a></li>
-                  <li><a href="../Principals-Email-List/index.html">Principals Email List</a></li>
-                  <li><a href="../Schools-Districts-Email-List/index.html">Schools Districts Email List</a></li>
-                  <li><a href="../Schools-Email-List/index.html">Schools Email List</a></li>
-                  <li><a href="../Teachers-Email-List/index.html">Teachers Email List</a></li>
-		    <li><a href="../education-sector-more-industries-list/index.html">&amp; Many more</a></li>
+                  <li><a href="../services/ai-development-automation/ai-agent-development/index.html">AI Agent Development</a></li>
+                  <li><a href="../services/ai-development-automation/ai-chatbot-development/index.html">AI Chatbot Development</a></li>
+                  <li><a href="../services/ai-development-automation/generative-ai-development/index.html">Generative AI Development</a></li>
+                  <li><a href="../services/ai-development-automation/machine-learning-development/index.html">Machine Learning Development</a></li>
+                  <li><a href="../services/ai-development-automation/ai-workflow-automation/index.html">AI Workflow Automation</a></li>
+                  <li><a href="../services/ai-development-automation/custom-gpt-development/index.html">Custom GPT Development</a></li>
+                  <li class="dropdown"><a href="../services/ai-development-automation/rpa-business-process-automation/index.html"><span>RPA &amp; Business Process Automation</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li><a href="../services/ai-development-automation/rpa-business-process-automation/robotic-process-automation/index.html">Robotic Process Automation (RPA)</a></li>
+                      <li><a href="../services/ai-development-automation/rpa-business-process-automation/business-process-automation/index.html">Business Process Automation (BPA)</a></li>
+                      <li><a href="../services/ai-development-automation/rpa-business-process-automation/workflow-automation/index.html">Workflow Automation</a></li>
+                      <li><a href="../services/ai-development-automation/rpa-business-process-automation/intelligent-document-processing/index.html">Intelligent Document Processing</a></li>
+                      <li><a href="../services/ai-development-automation/rpa-business-process-automation/data-entry-automation/index.html">Data Entry Automation</a></li>
+                      <li><a href="../services/ai-development-automation/rpa-business-process-automation/enterprise-process-automation/index.html">Enterprise Process Automation</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
-              <li class="dropdown"><a href="../Finance-Industry/index.html"><span>Finance Industry</span> <i
-                    class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="../services/custom-software-development/index.html"><span>Custom Software Development Services</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="../Banking-Email-List/index.html">Banking Email List</a></li>
-                  <li><a href="../Credit-Unions-Email-List/index.html">Credit Unions Email List</a></li>
-                  <li><a href="../Finance-Industry-Email-List/index.html">Finance Industry Email List</a></li>
-                  <li><a href="../Insurance-Agents-List/index.html">Insurance Agents List</a></li>
-                  <li><a href="../Mortgage-Loan-Brokers-Email-List/index.html">Mortgage Loan Brokers Email List</a></li>
-                  <li><a href="../finance-more-industries/index.html">&amp; Many more</a></li>
-                  <!-- <li><a href="../real-estate-agents-email-list/index.html">Real Estate Agents Email List</a></li> -->
+                  <li><a href="../services/custom-software-development/enterprise-software-development/index.html">Enterprise Software Development</a></li>
+                  <li><a href="../services/custom-software-development/custom-crm-development/index.html">Custom CRM Development</a></li>
+                  <li><a href="../services/custom-software-development/custom-erp-development/index.html">Custom ERP Development</a></li>
+                  <li><a href="../services/custom-software-development/saas-product-development/index.html">SaaS Product Development</a></li>
+                  <li><a href="../services/custom-software-development/desktop-application-development/index.html">Desktop Application Development</a></li>
+                  <li><a href="../services/custom-software-development/command-line-cli-cmd-development/index.html">Command-Line (CLI/CMD) Development</a></li>
                 </ul>
               </li>
-              <li class="dropdown"><a href="../Healthcare-Industry/index.html"><span>Healthcare Industry</span> <i
-                    class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="../services/erp-crm-development-services/index.html"><span>ERP &amp; CRM Development Services</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="../Clinics-Email-List/index.html">Clinics Email List</a></li>
-                  <li><a href="../Dentists-Email-List/index.html">Dentists Email List</a></li>
-                  <li><a href="../Hospitals-Email-List/index.html">Hospitals Email List</a></li>
-                  <li><a href="../Medical-Equipment-Dealers-List/index.html">Medical Equipment Dealers List</a></li>
-                  <li><a href="../Nurses-Email-List/index.html">Nurses Email List</a></li>
-                  <li><a href="../Pharmaceutical-Email-List/index.html">Pharmaceutical Email List</a></li>
-                  <li><a href="../Physicians-and-Surgeons-Email-List/index.html">Physicians and Surgeons Email List</a></li>
-                  <li><a href="../healthcare-more-industries/index.html">&amp; Many more</a></li>
-
+                  <li><a href="../services/erp-crm-development-services/custom-erp-software-development/index.html">Custom ERP Software Development</a></li>
+                  <li><a href="../services/erp-crm-development-services/custom-crm-software-development/index.html">Custom CRM Software Development</a></li>
+                  <li><a href="../services/erp-crm-development-services/erp-implementation-integration/index.html">ERP Implementation &amp; Integration</a></li>
+                  <li><a href="../services/erp-crm-development-services/crm-integration-automation/index.html">CRM Integration &amp; Automation</a></li>
+                  <li><a href="../services/erp-crm-development-services/hrm-software-development/index.html">HRM Software Development</a></li>
+                  <li><a href="../services/erp-crm-development-services/inventory-management-software-development/index.html">Inventory Management Software Development</a></li>
                 </ul>
               </li>
-              <li><a href="../IT-Emailing-List/index.html">IT Emailing List</a></li>
-              <li><a href="../Oil-and-Gas-Industry-List/index.html">Oil and Gas Industry List</a></li>
-              <li><a href="../Real-Estate-Mailing-List/index.html">Real Estate Mailing List</a></li>
-              <li><a href="../property-management-email-list/index.html">Property Management Email List</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="../Web-Design/index.html">Web Design</a></li>
           <li><a class="nav-link scrollto" href="../blog/index.html">Blog</a></li>
           <li><a class="nav-link scrollto" href="../Pay-Now/index.html">Pay Now</a></li>
           <li><a class="nav-link scrollto" href="../Contact-us/index.html">Contact Us</a></li>
@@ -225,24 +239,24 @@
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <p>Global Contact Hub </p>
+          <p>GlobalMarco </p>
         </header>
 
         <div class="row">
 
           <div class="col-lg-12 text-justify" data-aos="fade-up" data-aos-delay="200">
             <div class="box">
-              <p><a href="../index.html">Global Contact Hub</a> is the leading provider of quality email lists in the B2B industry, we
+              <p><a href="../index.html">GlobalMarco</a> is the leading provider of quality email lists in the B2B industry, we
                 offer a wide variety of lists that including contact lists, business leads and more, all
                 of our lists are up to date and verified, so you can be sure that you’re reaching your
                 target audience. our lists are specifically tailored to your industry, so you can be
-                sure that you’re reaching your customers and prospects. Global Contact Hub can help you
+                sure that you’re reaching your customers and prospects. GlobalMarco can help you
                 gain a competitive edge by improving your sales and marketing results.</p>
               <p>Email lists are critical to any business, whether you run a B2C or B2B company, email
                 marketing is the best way to reach your customers, the problem is that most of the email
                 lists available on the market are outdated, irrelevant, or fake, so how can you ensure
                 that you’re reaching the right people?</p>
-              <p>The good news is that there is a solution: Global Contact Hub is a premiere email list
+              <p>The good news is that there is a solution: GlobalMarco is a premiere email list
                 provider in the B2B industry. </p>
             </div>
             <br>
@@ -333,7 +347,7 @@
     },
     {
       "@type": "Question",
-      "name": "How Global Contact Hub will build the database?",
+      "name": "How GlobalMarco will build the database?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "All the contacts are harvested organically; we attend trade shows, exhibitions, conferences, and magazine subscription and more."
@@ -341,7 +355,7 @@
     },
     {
       "@type": "Question",
-      "name": "Why Global Contact Hub is different from other database company?",
+      "name": "Why GlobalMarco is different from other database company?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "We are one of the very few data sellers that offers a “written” data replacement guarantee. This means that if you ever find any errors in our data, we will replace it for you free of charge. We also offer a 100% satisfaction guarantee, so you can be sure that you’re getting the highest quality data available."
@@ -357,7 +371,7 @@
     },
     {
       "@type": "Question",
-      "name": "Global Contact Hub will provide client`s information to others?",
+      "name": "GlobalMarco will provide client`s information to others?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "We do not share/provide any information of our client’s."
@@ -375,7 +389,7 @@
           <div class="reply-form">
             <h4>Our mission is to build the data backbone for modern businesses.</h4>
             <br>
-            <p>Global Contact Hub is the marketing data engine for customer interactions.</p>
+            <p>GlobalMarco is the marketing data engine for customer interactions.</p>
             <p>We help businesses grow by providing tools that help them deeply understand their
               customers,<br>identify future prospects,and highly personalize every single marketing and
               sales interaction.</p>
@@ -401,7 +415,7 @@
               <h2>Get a Free Quote</h2>
               <br>
               <div class="contactpara">
-                <p>Global Contact Hub is the leading provider of quality email lists in the B2B industry, we
+                <p>GlobalMarco is the leading provider of quality email lists in the B2B industry, we
                   offer a wide variety of lists that including contact lists, business leads and more, all
                   of our lists are up to date and verified, so you can be sure that you’re reaching your
                   target audience.</p>
@@ -493,7 +507,7 @@
                 <div class="col-lg-12">
                   <div class="CN-header">
                     <h6>Email:</h6>
-                    <p class="CN-content"><a href="mailto:robert.h@globalcontacthub.com">robert.h@globalcontacthub.com</a></p>
+                    <p class="CN-content"><a href="mailto:info@globalmarco.com">info@globalmarco.com</a></p>
                   </div>
                 </div>
               </div>
@@ -507,7 +521,8 @@
     </section>
     <!-- for Contact Number End -->
 
-  </main><!-- End #main -->
+
+      </main><!-- End #main -->
   <br><br>
 
   <!-- ======= Footer ======= -->
@@ -565,8 +580,8 @@ s0.parentNode.insertBefore(s1,s0);
         <div class="row gy-4">
           <div class="col-lg-4 col-md-12 footer-info">
             <a href="../index.html" class="logo d-flex align-items-center">
-              <img src="/assets/img/logo-gch-mark.svg" alt="Global Contact Hub Logo">
-              <span>Global Contact Hub</span>
+              <img src="/assets/img/logo-globalmarco-icon.svg" alt="GlobalMarco Logo">
+              <span>GlobalMarco</span>
             </a>
             <p><b>Good Info Gets Affordable</b><br>
               Improve your efficiency and productivity with our accurate and customized data.</p>
@@ -593,6 +608,7 @@ s0.parentNode.insertBefore(s1,s0);
           <div class="col-lg-3 col-6 footer-links">
             <h4>Our Services</h4>
             <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="../Web-Design/index.html">Web Design</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="../Automotive-Industry-List/index.html">Automotive Industry
                   List</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="../Aviation-Industry/index.html">Aviation Industry</a></li>
@@ -608,7 +624,7 @@ s0.parentNode.insertBefore(s1,s0);
             <p>
               44538 15th St E Suite 5 Lancaster,<br>CA 93535<br><br>
               <strong>Phone: </strong><a href="tel:+16614512161">+1 661-451-2161</a><br>
-              <strong>Email: </strong><a href="mailto:info@globalcontacthub.com">info@globalcontacthub.com</a><br>
+              <strong>Email: </strong><a href="mailto:info@globalmarco.com">info@globalmarco.com</a><br>
             </p>
 
           </div>
@@ -619,13 +635,13 @@ s0.parentNode.insertBefore(s1,s0);
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyrights <strong><span>Global Contact Hub</span></strong>. All Rights Reserved
+        &copy; Copyrights <strong><span>GlobalMarco</span></strong>. All Rights Reserved
       </div>
 
     </div>
   </footer><!-- End Footer -->
   <div class="sticky-mailus">
-    <a href="mailto:info@globalcontacthub.com"><i class="bi bi-envelope" title="Mail Us"></i></a>
+    <a href="mailto:info@globalmarco.com"><i class="bi bi-envelope" title="Mail Us"></i></a>
     <a href="tel:+16614512161"><i class="bi bi-telephone" title="Call Us"></i></a>
     <a href="../Contact-us/index.html#contact"><i class="bi bi-alarm" title="Schedule a Call"></i></a>
   </div>

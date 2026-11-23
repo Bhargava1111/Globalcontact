@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  var primaryEmail = "info@globalcontacthub.com";
-  var secondaryEmail = "robert.h@globalcontacthub.com";
+  var primaryEmail = "info@globalmarco.com";
+  var secondaryEmail = "info@globalmarco.com";
   var apiEndpoint = "/api/contact";
 
   function collectFormData(form) {

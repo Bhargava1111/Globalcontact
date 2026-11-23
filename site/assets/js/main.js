@@ -476,25 +476,4 @@ $(function() {
 //   $('#carouselExampleSlidesOnly').carousel();
 // });
 
-/* contact form modal*/
-// Function to show the enquiry popup
-// Function to show the enquiry popup
-function showEnquiryPopup() {
-  var enquiryPopup = document.getElementById("enquiryPopup");
-  enquiryPopup.style.display = "block";
-}
-
-// Function to hide the enquiry popup
-function hideEnquiryPopup() {
-  var enquiryPopup = document.getElementById("enquiryPopup");
-  enquiryPopup.style.display = "none";
-}
-
-// Show the popup after 5 seconds (5000 milliseconds)
-setTimeout(showEnquiryPopup, 5000);
-
-// Event listener for the close button
-const closeButton = document.getElementById("closeButton");
-if (closeButton) {
-  closeButton.addEventListener("click", hideEnquiryPopup);
-}
+/* Popups are intentionally disabled — inline contact forms are used instead. */

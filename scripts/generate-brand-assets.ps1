@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 Add-Type -AssemblyName System.Drawing
 
 $root = "c:\Users\hpula\Documents\trae_projects\MM projects\site\assets\img"
-$logoPath = Join-Path $root "logo-gch.png"
+$logoPath = Join-Path $root "logo-globalmarco-icon.png"
 $popupPath = Join-Path $root "5-years-local.png"
 
 function New-Brush([int]$a, [int]$r, [int]$g, [int]$b) {
@@ -53,7 +53,7 @@ $titleFont = New-Object System.Drawing.Font("Arial", 20, [System.Drawing.FontSty
 $tagFont = New-Object System.Drawing.Font("Arial", 8.5, [System.Drawing.FontStyle]::Bold)
 $titleBrush = New-Brush 255 8 28 86
 $tagBrush = New-Brush 255 117 131 150
-$g.DrawString("Global Contact Hub", $titleFont, $titleBrush, 78, 21)
+$g.DrawString("GlobalMarco", $titleFont, $titleBrush, 78, 21)
 $g.DrawString("BUSINESS DATA AND DIGITAL GROWTH", $tagFont, $tagBrush, 80, 49)
 
 $g.Dispose()
@@ -142,7 +142,7 @@ $sf = New-Object System.Drawing.StringFormat
 $sf.Alignment = [System.Drawing.StringAlignment]::Center
 $graphics.DrawString("5 YEARS", $font1, $textGold, 380, 500, $sf)
 $graphics.DrawString("CELEBRATION", $font2, $textGold, 380, 555, $sf)
-$graphics.DrawString("GLOBAL CONTACT HUB", $font3, (New-Brush 255 248 236 198), 380, 610, $sf)
+$graphics.DrawString("GLOBALMARCO", $font3, (New-Brush 255 248 236 198), 380, 610, $sf)
 
 $graphics.Dispose()
 Save-Png $bmp $popupPath

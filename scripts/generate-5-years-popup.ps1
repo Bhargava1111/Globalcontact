@@ -115,7 +115,7 @@ Draw-CenteredTextPath $graphics "5 YEARS" "Arial Black" 54 (New-Object System.Dr
 Draw-CenteredTextPath $graphics "CELEBRATION" "Arial Black" 29 (New-Object System.Drawing.RectangleF(175, 596, 420, 38)) $textBrush $null
 
 $tagBrush = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(255, 245, 232, 188))
-Draw-CenteredTextPath $graphics "GLOBAL CONTACT HUB" "Arial" 18 (New-Object System.Drawing.RectangleF(175, 648, 420, 28)) $tagBrush $null
+Draw-CenteredTextPath $graphics "GLOBALMARCO" "Arial" 18 (New-Object System.Drawing.RectangleF(175, 648, 420, 28)) $tagBrush $null
 
 $bitmap.Save($outputPath, [System.Drawing.Imaging.ImageFormat]::Png)
 

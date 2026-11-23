@@ -5,10 +5,10 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const siteRoot = path.join(__dirname, "..", "site");
 
-const faviconBlock = `  <link href="/assets/img/favicon.ico?v=2" rel="icon" sizes="any">
-  <link href="/assets/img/favicon-32.png?v=2" rel="icon" type="image/png" sizes="32x32">
-  <link href="/assets/img/favicon-16.png?v=2" rel="icon" type="image/png" sizes="16x16">
-  <link href="/assets/img/apple-touch-icon.png?v=2" rel="apple-touch-icon" sizes="180x180">`;
+const faviconBlock = `  <link href="/assets/img/favicon.ico?v=3" rel="icon" sizes="any">
+  <link href="/assets/img/favicon-32.png?v=3" rel="icon" type="image/png" sizes="32x32">
+  <link href="/assets/img/favicon-16.png?v=3" rel="icon" type="image/png" sizes="16x16">
+  <link href="/assets/img/apple-touch-icon.png?v=3" rel="apple-touch-icon" sizes="180x180">`;
 
 const faviconPatterns = [
   /<!-- Favicons -->\s*<link[^>]+favicon[^>]*>\s*(?:<link[^>]+(?:favicon|apple-touch-icon)[^>]*>\s*)*/gi,

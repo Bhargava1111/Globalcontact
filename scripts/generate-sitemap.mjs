@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const siteRoot = path.join(__dirname, "..", "site");
-const baseUrl = "https://globalcontacthub.com";
+const baseUrl = "https://globalmarco.com";
 
 async function collectPages(dir, relativeDir = "") {
   const entries = await fs.readdir(dir, { withFileTypes: true });

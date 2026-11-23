@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" fill="none">
+  <defs>
+    <linearGradient id="gc1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4154f1"/>
+      <stop offset="100%" stop-color="#47b2e4"/>
+    </linearGradient>
+    <filter id="sc1">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#4154f1" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Monitor frame -->
+  <rect x="70" y="50" width="310" height="220" rx="14" fill="white" stroke="#dde3ff" stroke-width="2" filter="url(#sc1)"/>
+  <!-- Browser chrome -->
+  <rect x="70" y="50" width="310" height="30" rx="14" fill="url(#gc1)" opacity="0.9"/>
+  <rect x="70" y="65" width="310" height="15" fill="url(#gc1)" opacity="0.9"/>
+  <circle cx="92" cy="65" r="5" fill="#fff" opacity="0.4"/>
+  <circle cx="108" cy="65" r="5" fill="#fff" opacity="0.3"/>
+  <circle cx="124" cy="65" r="5" fill="#fff" opacity="0.2"/>
+  <rect x="145" y="59" width="160" height="12" rx="6" fill="#fff" opacity="0.2"/>
+
+  <!-- Left panel: wireframe -->
+  <rect x="82" y="88" width="90" height="168" rx="6" fill="#f0f4ff"/>
+  <rect x="90" y="96" width="74" height="8" rx="4" fill="#4154f1" opacity="0.3"/>
+  <rect x="90" y="110" width="60" height="6" rx="3" fill="#47b2e4" opacity="0.25"/>
+  <rect x="90" y="122" width="68" height="6" rx="3" fill="#4154f1" opacity="0.2"/>
+  <rect x="90" y="134" width="55" height="6" rx="3" fill="#47b2e4" opacity="0.2"/>
+  <rect x="90" y="150" width="74" height="38" rx="4" fill="url(#gc1)" opacity="0.1" stroke="#4154f1" stroke-width="1" stroke-dasharray="3 3"/>
+  <rect x="94" y="154" width="66" height="6" rx="3" fill="#4154f1" opacity="0.2"/>
+  <rect x="94" y="164" width="50" height="6" rx="3" fill="#47b2e4" opacity="0.2"/>
+  <rect x="90" y="196" width="74" height="28" rx="4" fill="url(#gc1)" opacity="0.1" stroke="#4154f1" stroke-width="1" stroke-dasharray="3 3"/>
+  <rect x="94" y="202" width="66" height="6" rx="3" fill="#4154f1" opacity="0.2"/>
+  <rect x="94" y="214" width="40" height="6" rx="3" fill="#47b2e4" opacity="0.2"/>
+  <rect x="90" y="232" width="74" height="16" rx="8" fill="url(#gc1)" opacity="0.4"/>
+  <rect x="94" y="236" width="40" height="8" rx="4" fill="#fff" opacity="0.6"/>
+
+  <!-- Right panel: code -->
+  <rect x="180" y="88" width="188" height="168" rx="6" fill="#0d1b4b"/>
+  <rect x="188" y="98" width="40" height="5" rx="2.5" fill="#47b2e4" opacity="0.8"/>
+  <rect x="188" y="110" width="80" height="4" rx="2" fill="#4154f1" opacity="0.7"/>
+  <rect x="200" y="120" width="60" height="4" rx="2" fill="#47b2e4" opacity="0.5"/>
+  <rect x="200" y="130" width="90" height="4" rx="2" fill="#fff" opacity="0.3"/>
+  <rect x="188" y="140" width="70" height="4" rx="2" fill="#4154f1" opacity="0.6"/>
+  <rect x="200" y="150" width="50" height="4" rx="2" fill="#47b2e4" opacity="0.6"/>
+  <rect x="200" y="160" width="100" height="4" rx="2" fill="#fff" opacity="0.2"/>
+  <rect x="188" y="170" width="80" height="4" rx="2" fill="#4154f1" opacity="0.5"/>
+  <rect x="200" y="180" width="65" height="4" rx="2" fill="#47b2e4" opacity="0.5"/>
+  <rect x="188" y="190" width="40" height="4" rx="2" fill="#4154f1" opacity="0.4"/>
+  <rect x="188" y="202" width="90" height="4" rx="2" fill="#47b2e4" opacity="0.6"/>
+  <rect x="200" y="212" width="70" height="4" rx="2" fill="#fff" opacity="0.3"/>
+  <rect x="200" y="222" width="80" height="4" rx="2" fill="#4154f1" opacity="0.4"/>
+  <rect x="188" y="232" width="55" height="4" rx="2" fill="#47b2e4" opacity="0.5"/>
+  <rect x="188" y="242" width="40" height="4" rx="2" fill="#4154f1" opacity="0.4"/>
+
+  <!-- Monitor stand -->
+  <rect x="215" y="270" width="30" height="28" rx="4" fill="url(#gc1)" opacity="0.5"/>
+  <rect x="195" y="296" width="70" height="10" rx="5" fill="url(#gc1)" opacity="0.4"/>
+
+  <!-- Floating palette -->
+  <g transform="translate(20,120)" filter="url(#sc1)">
+    <ellipse cx="35" cy="30" rx="30" ry="24" fill="white" stroke="#dde3ff" stroke-width="1.5"/>
+    <circle cx="20" cy="22" r="6" fill="#4154f1" opacity="0.7"/>
+    <circle cx="34" cy="16" r="6" fill="#47b2e4" opacity="0.7"/>
+    <circle cx="48" cy="22" r="6" fill="#f7c05a" opacity="0.7"/>
+    <circle cx="50" cy="36" r="6" fill="#22c55e" opacity="0.7"/>
+    <circle cx="38" cy="43" r="6" fill="#e55353" opacity="0.7"/>
+    <circle cx="22" cy="38" r="6" fill="#c084fc" opacity="0.7"/>
+    <circle cx="34" cy="30" r="8" fill="white" stroke="#dde3ff" stroke-width="1.5"/>
+  </g>
+
+  <!-- Floating brush -->
+  <g transform="translate(410,100)">
+    <rect x="0" y="0" width="8" height="50" rx="4" fill="url(#gc1)" opacity="0.8" transform="rotate(-30 4 25)"/>
+    <ellipse cx="-5" cy="45" rx="8" ry="5" fill="#4154f1" opacity="0.5" transform="rotate(-30 4 25)"/>
+  </g>
+
+  <!-- Floating component chips -->
+  <g transform="translate(390,230)" filter="url(#sc1)">
+    <rect width="88" height="30" rx="8" fill="white" stroke="#dde3ff" stroke-width="1.5"/>
+    <rect x="6" y="8" width="14" height="14" rx="4" fill="url(#gc1)" opacity="0.6"/>
+    <rect x="26" y="11" width="40" height="6" rx="3" fill="#4154f1" opacity="0.3"/>
+    <rect x="70" y="11" width="12" height="6" rx="3" fill="#47b2e4" opacity="0.3"/>
+  </g>
+  <g transform="translate(390,268)" filter="url(#sc1)">
+    <rect width="88" height="30" rx="8" fill="white" stroke="#dde3ff" stroke-width="1.5"/>
+    <rect x="6" y="8" width="14" height="14" rx="4" fill="#47b2e4" opacity="0.5"/>
+    <rect x="26" y="11" width="30" height="6" rx="3" fill="#47b2e4" opacity="0.3"/>
+    <rect x="70" y="11" width="12" height="6" rx="3" fill="#4154f1" opacity="0.3"/>
+  </g>
+
+  <!-- Sparkles -->
+  <circle cx="150" cy="30" r="4" fill="#4154f1" opacity="0.4"/>
+  <circle cx="380" cy="40" r="3" fill="#47b2e4" opacity="0.5"/>
+  <circle cx="470" cy="150" r="3" fill="#4154f1" opacity="0.3"/>
+  <circle cx="30" cy="350" r="4" fill="#47b2e4" opacity="0.4"/>
+  <circle cx="470" cy="360" r="3" fill="#4154f1" opacity="0.3"/>
+</svg>

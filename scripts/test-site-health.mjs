@@ -40,10 +40,10 @@ try {
 
   const home = await fetch(baseUrl);
   const homeHtml = await home.text();
-  assert(homeHtml.includes('/assets/img/favicon.ico?v=2'), "Homepage missing favicon.ico link");
+  assert(homeHtml.includes('/assets/img/favicon.ico?v=3'), "Homepage missing favicon.ico link");
   assert(homeHtml.includes('assets/js/main.js'), "Homepage missing main.js");
 
-  const favicon = await fetch(`${baseUrl}assets/img/favicon.ico?v=2`);
+  const favicon = await fetch(`${baseUrl}assets/img/favicon.ico?v=3`);
   assert(favicon.ok, `Favicon request failed: ${favicon.status}`);
   assert((favicon.headers.get("content-type") || "").includes("image"), "Favicon is not an image");
 

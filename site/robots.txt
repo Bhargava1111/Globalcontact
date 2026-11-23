@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://globalcontacthub.com/sitemap.xml
+Sitemap: https://globalmarco.com/sitemap.xml
